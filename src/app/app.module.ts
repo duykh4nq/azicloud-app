@@ -38,6 +38,9 @@ import { RecordsInfomationsComponent } from './main/detail/detail-right/body-det
 import { RecordsContactComponent } from './main/detail/detail-right/body-detail-right/records/records-right/records-contact/records-contact.component';
 import { RecordsResumeComponent } from './main/detail/detail-right/body-detail-right/records/records-right/records-resume/records-resume.component';
 import { RecordsWorkComponent } from './main/detail/detail-right/body-detail-right/records/records-right/records-work/records-work.component';
+import { EmployeeListComponent } from './main/home/body-right/employee-list/employee-list.component';
+import { EmployeeComponent } from './main/home/body-right/employee/employee.component';
+import { EmployeeRoutingModule } from './main/home/body-right/employee-routing.module';
 
 @NgModule({
   declarations: [
@@ -69,7 +72,9 @@ import { RecordsWorkComponent } from './main/detail/detail-right/body-detail-rig
     RecordsInfomationsComponent,
     RecordsContactComponent,
     RecordsResumeComponent,
-    RecordsWorkComponent
+    RecordsWorkComponent,
+    EmployeeListComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +85,8 @@ import { RecordsWorkComponent } from './main/detail/detail-right/body-detail-rig
     DeatilRoutingModule,
     DetailRightRoutingModule,
     BodyDetailRightRoutingModule,
-    RecordsRoutingModule
+    RecordsRoutingModule,
+    EmployeeRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
