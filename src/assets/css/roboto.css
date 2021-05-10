@@ -1,0 +1,58 @@
+/**
+ * Include Roboto font in your project
+ * 
+ * Download Roboto ttf files from Google Fonts and place it in the same directory of this CSS file
+ * You can then use this font in your project by setting
+ * font-face: "Roboto", Helvetica, Roboto, Arial, sans-serif;
+ *
+ * @author Mattia Migliorini (deshack)
+ * @license MIT
+ */
+
+/* Light */
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url("../fonts/Roboto/Roboto-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 300;
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url("../fonts/Roboto/Roboto-LightItalic.ttf") format('truetype');
+}
+
+/* Normal */
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Regular'), local('Roboto-Regular'), url("../fonts/Roboto/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 400;
+    src: local('Roboto Italic'), local('Roboto-Italic'), url("../fonts/Roboto/Roboto-Italic.ttf") format('truetype');
+}
+
+/* Bold */
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url("../fonts/Roboto/Roboto-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 700;
+    src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url("../fonts/Roboto/Roboto-BoldItalic.ttf") format('truetype');
+}
