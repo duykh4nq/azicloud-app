@@ -19,7 +19,7 @@ const appRoutes: Routes = [
     path: '',
     component: DetailComponent,
     children: [
-      { path: '', loadChildren: () => RecordsRoutingModule },
+      { path: 'records', loadChildren: () => RecordsRoutingModule },
       {
         path: 'emulation-reward', component: EmulationRewardComponent,
       },
@@ -41,9 +41,9 @@ const appRoutes: Routes = [
       {
         path: 'customized', component: CustomizedComponent,
       },
-      {
-        path: 'records', component: RecordsComponent,
-      },
+      // {
+      //   path: 'records', component: RecordsComponent,
+      // },
     ],
   },
 ];
