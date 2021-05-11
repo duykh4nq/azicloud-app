@@ -41,6 +41,14 @@ import { RecordsWorkComponent } from './main/detail/detail-right/body-detail-rig
 import { EmployeeListComponent } from './main/home/body-right/employee-list/employee-list.component';
 import { EmployeeComponent } from './main/home/body-right/employee/employee.component';
 import { EmployeeRoutingModule } from './main/home/body-right/employee-routing.module';
+import { WorkLeftComponent } from './main/detail/detail-right/body-detail-right/work/work-left/work-left.component';
+import { WorkRightComponent } from './main/detail/detail-right/body-detail-right/work/work-right/work-right.component';
+import { WorkHeaderComponent } from './main/detail/detail-right/body-detail-right/work/work-right/work-header/work-header.component';
+import { WorkBodyComponent } from './main/detail/detail-right/body-detail-right/work/work-right/work-body/work-body.component';
+import { WorkingListComponent } from './main/detail/detail-right/body-detail-right/work/work-right/work-body/working-list/working-list.component';
+import { WorkingKanbanComponent } from './main/detail/detail-right/body-detail-right/work/work-right/work-body/working-kanban/working-kanban.component';
+import { WorkingMemberComponent } from './main/detail/detail-right/body-detail-right/work/work-right/work-body/working-member/working-member.component';
+import { WorkRoutingModule } from './main/detail/detail-right/body-detail-right/work/work-routing.module';
 
 @NgModule({
   declarations: [
@@ -74,7 +82,14 @@ import { EmployeeRoutingModule } from './main/home/body-right/employee-routing.m
     RecordsResumeComponent,
     RecordsWorkComponent,
     EmployeeListComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    WorkLeftComponent,
+    WorkRightComponent,
+    WorkHeaderComponent,
+    WorkBodyComponent,
+    WorkingListComponent,
+    WorkingKanbanComponent,
+    WorkingMemberComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +101,8 @@ import { EmployeeRoutingModule } from './main/home/body-right/employee-routing.m
     DetailRightRoutingModule,
     BodyDetailRightRoutingModule,
     RecordsRoutingModule,
-    EmployeeRoutingModule
+    EmployeeRoutingModule,
+    WorkRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

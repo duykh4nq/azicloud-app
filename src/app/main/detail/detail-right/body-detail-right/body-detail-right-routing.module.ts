@@ -1,3 +1,4 @@
+import { WorkRoutingModule } from './work/work-routing.module';
 import { RecordsRoutingModule } from './records/records-routing.module';
 import { DetailRightComponent } from './../detail-right.component';
 import { TimetableComponent } from './timetable/timetable.component';
@@ -19,7 +20,7 @@ const appRoutes: Routes = [
     path: '',
     component: DetailComponent,
     children: [
-      { path: '', loadChildren: () => RecordsRoutingModule },
+      { path: 'records', loadChildren: () => RecordsRoutingModule },
       {
         path: 'emulation-reward', component: EmulationRewardComponent,
       },
@@ -35,8 +36,11 @@ const appRoutes: Routes = [
       {
         path: 'timekeeping', component: TimekeepingComponent,
       },
+      // {
+      //   path: 'work', component: WorkComponent,
+      // },
       {
-        path: 'work', component: WorkComponent,
+        path: 'work', loadChildren:()=> WorkRoutingModule,
       },
       {
         path: 'customized', component: CustomizedComponent,
