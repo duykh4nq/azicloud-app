@@ -1,11 +1,13 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Select2OptionData } from 'ng-select2';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {
   NgbCalendar,
   NgbDateAdapter,
   NgbDateParserFormatter,
   NgbDateStruct
 } from '@ng-bootstrap/ng-bootstrap';
+
 @Injectable()
 export class CustomDateParserFormatter extends NgbDateParserFormatter {
   readonly DELIMITER = '/';
@@ -55,8 +57,28 @@ export class ProfileInfoWorkComponent implements OnInit {
   model5: String;
   constructor(
     private ngbCalendar: NgbCalendar,
-     private dateAdapter: NgbDateAdapter<string>
+    private dateAdapter: NgbDateAdapter<string>, private modalService: NgbModal
   ) { }
+
+  closeModal: string;
+
+  triggerModal(content) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((res) => {
+      this.closeModal = `Closed with: ${res}`;
+    }, (res) => {
+      this.closeModal = `Dismissed ${this.getDismissReason(res)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
   get today() {
     return this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
   }

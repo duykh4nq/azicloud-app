@@ -1,21 +1,13 @@
 import { Component, Input } from '@angular/core';
-// import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+
 @Component({
   selector: 'app-employees-pagination',
   templateUrl: './employees-pagination.component.html',
   styleUrls: ['./employees-pagination.component.css']
 })
 export class EmployeesPaginationComponent {
-  // constructor(config: NgbModalConfig, private modalService: NgbModal) {
-  //   // customize default values of modals used by this component tree
-  //   config.backdrop = 'static';
-  //   config.keyboard = false;
-  // }
-
-  // open(content) {
-  //   this.modalService.open(content);
-  // }
   closeModal: string;
 
   constructor(private modalService: NgbModal) { }
