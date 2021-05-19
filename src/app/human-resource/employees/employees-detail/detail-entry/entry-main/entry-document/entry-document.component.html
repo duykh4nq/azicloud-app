@@ -73,18 +73,18 @@
                   </button>
                 </div>
                 <div class="btn-group ml-2">
-                  <button
-                    data-toggle="dropdown"
-                    class="btn btn-default dropdown-toggle"
-                  >
-                    Hiển thị 100
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">10</a></li>
-                    <li><a class="dropdown-item" href="#">20</a></li>
-                    <li><a class="dropdown-item" href="#">50</a></li>
-                    <li><a class="dropdown-item" href="#">100</a></li>
-                  </ul>
+                  <div class="row">
+                    <div class="col">
+                        <div ngbDropdown class="d-inline-block">
+                            <button class="btn btn-default dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>Hiển thị 100</button>
+                            <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button ngbDropdownItem href="# "> 10</button>
+                                <button ngbDropdownItem href="# ">20</button>
+                                <button ngbDropdownItem href="# ">50</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 <div class="btn-group ml-2">
                   <a

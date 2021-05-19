@@ -10,6 +10,7 @@ import { EmployeesFormatRoutingModule } from './human-resource/employees/employe
 import { EmplyeesFilterRoutingModule } from './human-resource/employees/employees-filter/emplyees-filter-routing.module';
 import { DetailEntryRoutingModule } from './human-resource/employees/employees-detail/detail-entry/detail-entry-routing.module';
 import { EntryMainRoutingModule } from './human-resource/employees/employees-detail/detail-entry/entry-main/entry-main-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EntryMainRoutingModule } from './human-resource/employees/employees-det
     EmployeesFormatRoutingModule,
     EmplyeesFilterRoutingModule,
     DetailEntryRoutingModule,
-    EntryMainRoutingModule
+    EntryMainRoutingModule,
+    NgbModule
 
   ],
   providers: [],

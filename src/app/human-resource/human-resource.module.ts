@@ -35,8 +35,9 @@ import { EntryWorkListComponent } from './employees/employees-detail/detail-entr
 import { WorkFormatKanbanComponent } from './employees/employees-detail/detail-entry/entry-main/entry-working/entry-work-list/work-display-format/work-format-kanban/work-format-kanban.component';
 import { WorkFormatMemberComponent } from './employees/employees-detail/detail-entry/entry-main/entry-working/entry-work-list/work-display-format/work-format-member/work-format-member.component';
 import { WorkFormatListComponent } from './employees/employees-detail/detail-entry/entry-main/entry-working/entry-work-list/work-display-format/work-format-list/work-format-list.component';
-
-
+import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     EmployeesComponent,
@@ -76,7 +77,10 @@ import { WorkFormatListComponent } from './employees/employees-detail/detail-ent
   imports: [
     CommonModule,
     HumanResourceRoutingModule,
-    NgSelect2Module
+    NgbModule,
+    NgSelect2Module,
+    NgbPaginationModule, NgbAlertModule,
+    FormsModule
   ]
 })
 export class HumanResourceModule { }

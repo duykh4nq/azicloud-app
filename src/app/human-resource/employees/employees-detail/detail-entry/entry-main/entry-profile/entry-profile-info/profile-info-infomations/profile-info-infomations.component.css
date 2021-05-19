@@ -1,0 +1,21 @@
+@import "../../../../../../employees.component.css";
+.input-group .btn {
+    border: 1px solid #dbdddf;
+    font-size: 0.9rem;
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: 382px;
+    vertical-align: middle;
+}
+
+.input-group .form-control2 {
+    width: 222px;
+    border: 1px solid #dbdddf;
+}
+
+.input-group .form-control2:focus {
+    outline: #6610f2 auto 0.9em;
+    border-radius: 0px;
+}

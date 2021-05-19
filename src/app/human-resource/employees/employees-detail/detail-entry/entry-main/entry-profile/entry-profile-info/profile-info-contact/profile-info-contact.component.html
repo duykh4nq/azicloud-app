@@ -1,306 +1,191 @@
 <div class="row animated fadeInUp">
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>CHỖ Ở HIỆN NAY</h5>
-      <div class="ibox-tools">
-        <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
-      </div>
+    <div class="ibox col-lg-12">
+        <div class="ibox-title">
+            <h5>CHỖ Ở HIỆN NAY</h5>
+            <div class="ibox-tools">
+                <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="font-normal">Địa chỉ</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập mã nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Số cố định</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập số điện thoại bàn nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Quốc gia</label>
+                        <div class="input-group">
+                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Quận/ Huyện</label>
+                        <div class="input-group">
+                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Số di động</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập số điện thoại di động nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Tỉnh/ Thành phố</label>
+                        <div class="input-group">
+                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Phường/ Xã</label>
+                        <div class="input-group">
+                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="ibox-content">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="form-group">
-            <label class="font-normal">Địa chỉ</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập mã nhân viên"
-                class="form-control"
-              />
+    <div class="ibox col-lg-12">
+        <div class="ibox-title">
+            <h5>LIÊN HỆ KHẨN CẤP</h5>
+            <div class="ibox-tools">
+                <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Số cố định</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập số điện thoại bàn nhân viên"
-                class="form-control"
-              />
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="font-normal">Địa chỉ</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập mã nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Quốc gia</label>
-            <div class="input-group">
-              <select
-                data-placeholder="Chọn quốc gia..."
-                class="chosen-select"
-                tabindex="2"
-              >
-                <option value="">Chọn</option>
-                <option value="United States">Việt nam</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Afghanistan">Afghanistan</option>
-              </select>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Người liên hệ</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập họ và tên nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Số di động khẩn cấp</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập họ và tên nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Quan hệ với nhân viên</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập quan hệ với nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Số cố định khẩn cấp</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập họ và tên nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Quận/ Huyện</label>
-            <div class="input-group">
-              <select
-                data-placeholder="Chọn quận / huyện..."
-                class="chosen-select"
-                tabindex="2"
-              >
-                <option value="">Chọn</option>
-                <option value="United States">Việt nam</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Afghanistan">Afghanistan</option>
-              </select>
-            </div>
-          </div>
         </div>
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Số di động</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập số điện thoại di động nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Tỉnh/ Thành phố</label>
-            <div class="input-group">
-              <select
-                data-placeholder="Chọn tỉnh/ thành phố..."
-                class="chosen-select"
-                tabindex="2"
-              >
-                <option value="">Chọn</option>
-                <option value="United States">Việt nam</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Afghanistan">Afghanistan</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Phường/ Xã</label>
-            <div class="input-group">
-              <select
-                data-placeholder="Chọn phường / xã..."
-                class="chosen-select"
-                tabindex="2"
-              >
-                <option value="">Chọn</option>
-                <option value="United States">Việt nam</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Afghanistan">Afghanistan</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>LIÊN HỆ KHẨN CẤP</h5>
-      <div class="ibox-tools">
-        <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
-      </div>
+    <div class="ibox col-lg-12">
+        <div class="ibox-title">
+            <h5>ĐỊA CHỈ THƯỜNG TRÚ</h5>
+            <div class="ibox-tools">
+                <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="font-normal">Địa chỉ</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập mã nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Quốc gia</label>
+                        <div class="input-group">
+                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Quận/ Huyện</label>
+                        <div class="input-group">
+                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Nguyên quán</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập nguyên quán nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Tỉnh/ Thành phố</label>
+                        <div class="input-group">
+                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Phường/ Xã</label>
+                        <div class="input-group">
+                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Địa chỉ hiện tại</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập địa chỉ hiện tại nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="ibox-content">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="form-group">
-            <label class="font-normal">Địa chỉ</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập mã nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Người liên hệ</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập họ và tên nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Số di động khẩn cấp</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập họ và tên nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Quan hệ với nhân viên</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập quan hệ với nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Số cố định khẩn cấp</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập họ và tên nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>ĐỊA CHỈ THƯỜNG TRÚ</h5>
-      <div class="ibox-tools">
-        <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
-      </div>
-    </div>
-    <div class="ibox-content">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="form-group">
-            <label class="font-normal">Địa chỉ</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập mã nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Quốc gia</label>
-            <div class="input-group">
-              <select
-                data-placeholder="Chọn quốc gia..."
-                class="chosen-select"
-                tabindex="2"
-              >
-                <option value="">Chọn</option>
-                <option value="United States">Việt nam</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Afghanistan">Afghanistan</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Quận/ Huyện</label>
-            <div class="input-group">
-              <select
-                data-placeholder="Chọn quận / huyện..."
-                class="chosen-select"
-                tabindex="2"
-              >
-                <option value="">Chọn</option>
-                <option value="United States">Việt nam</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Afghanistan">Afghanistan</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Nguyên quán</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập nguyên quán nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Tỉnh/ Thành phố</label>
-            <div class="input-group">
-              <select
-                data-placeholder="Chọn tỉnh/ thành phố..."
-                class="chosen-select"
-                tabindex="2"
-              >
-                <option value="">Chọn</option>
-                <option value="United States">Việt nam</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Afghanistan">Afghanistan</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Phường/ Xã</label>
-            <div class="input-group">
-              <select
-                data-placeholder="Chọn phường / xã..."
-                class="chosen-select"
-                tabindex="2"
-              >
-                <option value="">Chọn</option>
-                <option value="United States">Việt nam</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Afghanistan">Afghanistan</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Địa chỉ hiện tại</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập địa chỉ hiện tại nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>NGƯỜI PHỤ THUỘC</h5>
-      <div class="ibox-tools">
-        <a
-          href=""
-          data-toggle="modal"
-          data-target="#myModal6"
-          data-backdrop="static"
-          data-keyboard="false"
-          class="btn btn-primary btn-xs"
-          >Thêm mới</a
+    <div class="ibox col-lg-12">
+        <div class="ibox-title">
+            <h5>NGƯỜI PHỤ THUỘC</h5>
+            <div class="ibox-tools">
+                <a href="" data-toggle="modal" data-target="#myModal6" data-backdrop="static" data-keyboard="false" class="btn btn-primary btn-xs">Thêm mới</a
         >
       </div>
     </div>
@@ -324,29 +209,29 @@
               <td>gravida@rbisit.com</td>
               <td class="client-status text-right">
                 <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Rooney Lindsay</td>
-              <td>Proin Limited</td>
-              <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-              <td>rooney@proin.com</td>
-              <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Lionel Mcmillan</td>
-              <td>Et Industries</td>
-              <td class="contact-type"><i class="fa fa-phone"> </i></td>
-              <td>+432 955 908</td>
-              <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                </td>
+                </tr>
+                <tr>
+                    <td>Rooney Lindsay</td>
+                    <td>Proin Limited</td>
+                    <td class="contact-type"><i class="fa fa-envelope"> </i></td>
+                    <td>rooney@proin.com</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lionel Mcmillan</td>
+                    <td>Et Industries</td>
+                    <td class="contact-type"><i class="fa fa-phone"> </i></td>
+                    <td>+432 955 908</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

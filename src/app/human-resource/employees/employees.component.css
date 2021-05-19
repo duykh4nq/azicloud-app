@@ -1,6 +1,9 @@
 @import '../../../assets/css/bootstrap.min.css';
 @import '~font-awesome/css/font-awesome.css';
-@import '../../../assets/css/plugins/iCheck/custom.css';
+@import '../../../assets/css/animate.css';
+@import '../../../assets/css/style.css';
+
+/* @import '../../../assets/css/plugins/iCheck/custom.css';
 @import '../../../assets/css/plugins/chosen/bootstrap-chosen.css';
 @import '../../../assets/css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css';
 @import '../../../assets/css/plugins/colorpicker/bootstrap-colorpicker.min.css';
@@ -17,6 +20,4 @@
 @import '../../../assets/css/plugins/select2/select2.min.css';
 @import '../../../assets/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css';
 @import '../../../assets/css/plugins/dualListbox/bootstrap-duallistbox.min.css';
-@import '../../../assets/css/plugins/summernote/summernote-bs4.css';
-@import '../../../assets/css/animate.css';
-@import '../../../assets/css/style.css';
+@import '../../../assets/css/plugins/summernote/summernote-bs4.css'; */

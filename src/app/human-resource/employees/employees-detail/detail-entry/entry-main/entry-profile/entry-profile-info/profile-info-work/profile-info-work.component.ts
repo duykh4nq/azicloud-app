@@ -1,11 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { Select2OptionData } from 'ng-select2';
+import {
+  NgbCalendar,
+  NgbDateAdapter,
+  NgbDateParserFormatter,
+  NgbDateStruct
+} from '@ng-bootstrap/ng-bootstrap';
+@Injectable()
+export class CustomDateParserFormatter extends NgbDateParserFormatter {
+  readonly DELIMITER = '/';
 
+  parse(value: string): NgbDateStruct | null {
+    if (value) {
+      let date = value.split(this.DELIMITER);
+      return {
+        day: parseInt(date[0], 10),
+        month: parseInt(date[1], 10),
+        year: parseInt(date[2], 10)
+      };
+    }
+    return null;
+  }
+
+  format(date: NgbDateStruct | null): string {
+    return date
+      ? date.day + this.DELIMITER + date.month + this.DELIMITER + date.year
+      : '';
+  }
+}
 @Component({
   selector: 'app-profile-info-work',
   templateUrl: './profile-info-work.component.html',
-  styleUrls: ['./profile-info-work.component.css']
+  styleUrls: ['./profile-info-work.component.css'],
+  providers: [
+    { provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter }
+  ]
 })
+
 export class ProfileInfoWorkComponent implements OnInit {
 
 
@@ -17,8 +48,18 @@ export class ProfileInfoWorkComponent implements OnInit {
   public exampleData6: Array<Select2OptionData>;
   public exampleData7: Array<Select2OptionData>;
   public exampleData8: Array<Select2OptionData>;
-  constructor() { }
-
+  model1: String;
+  model2: String;
+  model3: String;
+  model4: String;
+  model5: String;
+  constructor(
+    private ngbCalendar: NgbCalendar,
+     private dateAdapter: NgbDateAdapter<string>
+  ) { }
+  get today() {
+    return this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
+  }
   ngOnInit(): void {
     this.exampleData = [
       {

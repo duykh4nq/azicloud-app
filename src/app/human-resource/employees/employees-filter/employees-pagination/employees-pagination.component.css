@@ -1,1 +1,47 @@
 @import "../../employees.component.css";
+.dropdown-menu {
+    border: medium none;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(86, 96, 117, 0.7);
+    display: none;
+    float: left;
+    font-size: 12px;
+    left: 0;
+    list-style: none outside none;
+    padding: 0;
+    position: absolute;
+    text-shadow: none;
+    top: 100%;
+    z-index: 1000;
+}
+
+.dropdown-menu>button {
+    border-radius: 3px;
+    color: inherit;
+    line-height: 25px;
+    width: 100%;
+    text-align: left;
+    font-weight: normal;
+    display: block;
+    padding: 3px 20px;
+}
+
+.dropdown-menu>button:focus,
+.dropdown-menu>button:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu>.active>button,
+.dropdown-menu>.active>button:focus,
+.dropdown-menu>.active>button:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #34499d;
+    outline: 0;
+}
+
+.dropdown-menu>button.font-bold {
+    font-weight: 600;
+}

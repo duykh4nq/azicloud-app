@@ -1,0 +1,17 @@
+@import "../../../../../../employees.component.css";
+@import '../../../../../../../../../assets/css/plugins/select2/select2.min.css';
+
+/* .ng-select2 {
+    word-wrap: normal;
+    width: 420px;
+    height: 35px;
+} */
+
+.input-group .form-control {
+    width: 382px;
+}
+
+.input-group .btn {
+    border: 1px solid #dbdddf;
+    font-size: 0.9rem;
+}
