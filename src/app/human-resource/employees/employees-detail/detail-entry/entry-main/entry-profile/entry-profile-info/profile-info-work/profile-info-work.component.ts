@@ -55,6 +55,9 @@ export class ProfileInfoWorkComponent implements OnInit {
   model3: String;
   model4: String;
   model5: String;
+  model6: string;
+  model7: String;
+  model8: string;
   closeModal: string;
   constructor(
     private modalService: NgbModal,

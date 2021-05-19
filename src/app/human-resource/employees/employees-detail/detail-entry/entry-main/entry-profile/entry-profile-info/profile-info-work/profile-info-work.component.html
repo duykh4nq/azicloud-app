@@ -401,6 +401,11 @@
                                             </span>
                                         </div>
                                     </div>
+                                    <!-- <div class="toggle-example">
+                                      <input [ngxTimepicker]="toggleTimepicker" [disableClick]="true" readonly>
+                                      <ngx-material-timepicker-toggle [for]="toggleTimepicker"></ngx-material-timepicker-toggle>
+                                      <ngx-material-timepicker #toggleTimepicker></ngx-material-timepicker>
+                                  </div> -->
                                     <div class="col-lg-3">
                                         <div class="input-group clockpicker" data-autoclose="true">
                                             <input type="text" class="form-control" value="09:30" />
@@ -550,223 +555,159 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label class="font-normal">Ngày áp dụng</label>
-                            <div class="input-group date">
-                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span
-                ><input
-                  type="text"
-                  class="form-control"
-                  placeholder="Chọn ngày áp dụng"
-                  value="03/04/2014"
-                />
-              </div>
+                            <form class="form-inline">
+                                <div class="form-group date">
+                                    <div class="input-group">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline calendar" (click)="d6.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+                                        </div>
+                                        <input class="form-control" style="width: 170px" placeholder="dd/mm/yyyy" name="d6" #c6="ngModel" [(ngModel)]="model6" ngbDatepicker #d6="ngbDatepicker">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Tổng thời gian/ tuần</label>
+                            <div class="input-group">
+                                <input type="text" readonly placeholder="Tổng số thời gian làm việc trong tuần" value="0" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label class="font-normal">Tổng thời gian/ tuần</label>
-              <div class="input-group">
-                <input
-                  type="text"
-                  readonly
-                  placeholder="Tổng số thời gian làm việc trong tuần"
-                  value="0"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-white min-w-100"
-          data-dismiss="modal"
-          (click)="d('Cross click')"
-        >
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">
           Hủy
         </button>
-        <button type="button" class="btn btn-primary min-w-100">
+                <button type="button" class="btn btn-primary min-w-100">
           Lưu thay đổi
         </button>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </ng-template>
 <ng-template #job let-c="close" let-d="dismiss">
-  <div tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">THÔNG TIN VIỆC LÀM</h4>
-      </div>
-      <div class="modal-body white-bg">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label class="font-normal">Chức danh</label>
-              <div class="input-group">
-                <select
-                  data-placeholder="Chọn chức danh.."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Trưởng phòng kinh doanh</option>
-                  <option value="United Kingdom">Lập trình Mobile Apps</option>
-                  <option value="Afghanistan">Nghỉ</option>
-                </select>
-              </div>
+    <div tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">THÔNG TIN VIỆC LÀM</h4>
             </div>
-            <div class="form-group">
-              <label class="font-normal">Loại việc làm</label>
-              <div class="input-group">
-                <select
-                  data-placeholder="Chọn loại việc làm..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Toàn thời gian</option>
-                  <option value="United Kingdom">Bán thời gian</option>
-                  <option value="Afghanistan">Thực tập</option>
-                </select>
-              </div>
+            <div class="modal-body white-bg">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Chức danh</label>
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <ng-select2 class="chosen-select" [data]="exampleData9" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                    </ng-select2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Loại việc làm</label>
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <ng-select2 class="chosen-select" [data]="exampleData9" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                    </ng-select2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Công ty</label>
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <ng-select2 class="chosen-select" [data]="exampleData9" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                    </ng-select2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Phòng ban</label>
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <ng-select2 class="chosen-select" [data]="exampleData9" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                    </ng-select2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Ngày bắt đầu</label>
+                            <form class="form-inline">
+                                <div class="form-group date">
+                                    <div class="input-group">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline calendar" (click)="d7.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+                                        </div>
+                                        <input class="form-control" style="width: 170px" placeholder="dd/mm/yyyy" name="d7" #c7="ngModel" [(ngModel)]="model7" ngbDatepicker #d7="ngbDatepicker">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Tình trạng</label>
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <ng-select2 class="chosen-select" [data]="exampleData9" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                    </ng-select2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Nhóm công việc</label>
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <ng-select2 class="chosen-select" [data]="exampleData9" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                    </ng-select2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Chi nhánh</label>
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <ng-select2 class="chosen-select" [data]="exampleData9" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                    </ng-select2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Người quản lý trực tiếp</label>
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <ng-select2 class="chosen-select" [data]="exampleData9" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                    </ng-select2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Ngày kết thúc</label>
+                            <form class="form-inline">
+                                <div class="form-group date">
+                                    <div class="input-group">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline calendar" (click)="d8.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+                                        </div>
+                                        <input class="form-control" style="width: 170px" placeholder="dd/mm/yyyy" name="d8" #c8="ngModel" [(ngModel)]="model8" ngbDatepicker #d8="ngbDatepicker">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-              <label class="font-normal">Công ty</label>
-              <div class="input-group">
-                <select
-                  data-placeholder="Chọn công ty..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Phòng ban</label>
-              <div class="input-group">
-                <select
-                  data-placeholder="Chọn phòng ban..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Ngày bắt đầu</label>
-              <div class="input-group date">
-                <span class="input-group-addon"
-                  ><i class="fa fa-calendar"></i></span
-                ><input
-                  type="text"
-                  class="form-control"
-                  placeholder="Chọn ngày bắt đầu"
-                  value="03/04/2014"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label class="font-normal">Tình trạng</label>
-              <div class="input-group">
-                <select
-                  data-placeholder="Chọn tình trạng.."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Thực tập</option>
-                  <option value="United Kingdom">Thử việc</option>
-                  <option value="Afghanistan">Nghỉ</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Nhóm công việc</label>
-              <div class="input-group">
-                <select
-                  data-placeholder="Chọn nhóm công việc..."
-                  multiple
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Nhân viên</option>
-                  <option value="United Kingdom">Quản lý</option>
-                  <option value="Afghanistan">Đào tạo</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Chi nhánh</label>
-              <div class="input-group">
-                <select
-                  data-placeholder="Chọn chi nhánh..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Người quản lý trực tiếp</label>
-              <div class="input-group">
-                <select
-                  data-placeholder="Chọn người quản lý trực tiếp..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Ngày kết thúc</label>
-              <div class="input-group date">
-                <span class="input-group-addon"
-                  ><i class="fa fa-calendar"></i></span
-                ><input
-                  type="text"
-                  class="form-control"
-                  placeholder="Chọn ngày kết thúc"
-                  value="03/04/2014"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-white min-w-100"
-          data-dismiss="modal"
-          (click)="d('Cross click')"
-        >
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">
           Hủy
         </button>
-        <button type="button" class="btn btn-primary min-w-100">
+                <button type="button" class="btn btn-primary min-w-100">
           Lưu thay đổi
         </button>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </ng-template>
