@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Select2OptionData } from 'ng-select2';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-profile-info-work',
@@ -17,7 +18,15 @@ export class ProfileInfoWorkComponent implements OnInit {
   public exampleData6: Array<Select2OptionData>;
   public exampleData7: Array<Select2OptionData>;
   public exampleData8: Array<Select2OptionData>;
-  constructor() { }
+  constructor(config: NgbModalConfig, private modalService: NgbModal) {
+    // customize default values of modals used by this component tree
+    config.backdrop = 'static';
+    config.keyboard = false;
+  }
+
+  open(content) {
+    this.modalService.open(content);
+  }
 
   ngOnInit(): void {
     this.exampleData = [

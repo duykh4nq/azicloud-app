@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'app-profile-info-infomations',
@@ -11,5 +12,4 @@ export class ProfileInfoInfomationsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
