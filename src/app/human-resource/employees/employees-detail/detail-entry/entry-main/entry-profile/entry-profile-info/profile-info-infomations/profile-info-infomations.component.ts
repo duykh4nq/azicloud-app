@@ -79,5 +79,4 @@ export class ProfileInfoInfomationsComponent implements OnInit {
       }
     ];
   }
-
 }
