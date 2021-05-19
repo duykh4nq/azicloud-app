@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Select2OptionData } from 'ng-select2';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {
   NgbCalendar,
   NgbDateAdapter,
@@ -48,17 +49,36 @@ export class ProfileInfoWorkComponent implements OnInit {
   public exampleData6: Array<Select2OptionData>;
   public exampleData7: Array<Select2OptionData>;
   public exampleData8: Array<Select2OptionData>;
+  public exampleData9: Array<Select2OptionData>;
   model1: String;
   model2: String;
   model3: String;
   model4: String;
   model5: String;
+  closeModal: string;
   constructor(
+    private modalService: NgbModal,
     private ngbCalendar: NgbCalendar,
      private dateAdapter: NgbDateAdapter<string>
   ) { }
   get today() {
     return this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
+  }
+  triggerModal(content) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((res) => {
+      this.closeModal = `Closed with: ${res}`;
+    }, (res) => {
+      this.closeModal = `Dismissed ${this.getDismissReason(res)}`;
+    });
+  }
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
   ngOnInit(): void {
     this.exampleData = [
@@ -173,6 +193,20 @@ export class ProfileInfoWorkComponent implements OnInit {
       {
         id: 'Afghanistan',
         text: 'Afghanistan'
+      }
+    ];
+    this.exampleData9 = [
+      {
+        id: 'United States',
+        text: 'Sang'
+      },
+      {
+        id: 'United Kingdom',
+        text: 'Toi'
+      },
+      {
+        id: 'Afghanistan',
+        text: 'Khuya'
       }
     ];
   }

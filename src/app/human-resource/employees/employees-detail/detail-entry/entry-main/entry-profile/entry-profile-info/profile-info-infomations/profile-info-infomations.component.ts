@@ -45,7 +45,8 @@ export class ProfileInfoInfomationsComponent implements OnInit {
     model4: String;
     model5: String;
   public exampleData: Array<Select2OptionData>;
-  constructor(private ngbCalendar: NgbCalendar,
+  constructor(
+    private ngbCalendar: NgbCalendar,
     private dateAdapter: NgbDateAdapter<string>) { }
 
     get today() {

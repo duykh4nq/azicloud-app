@@ -1,1 +1,5 @@
 @import "../../../../../employees-detail.component.css";
+.input-group .btn {
+    border: 1px solid #dbdddf;
+    font-size: 0.9rem;
+}
