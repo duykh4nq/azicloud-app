@@ -38,6 +38,11 @@ import { WorkFormatListComponent } from './employees/employees-detail/detail-ent
 import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+
+
+
 @NgModule({
   declarations: [
     EmployeesComponent,
@@ -80,7 +85,9 @@ import { FormsModule } from '@angular/forms';
     NgbModule,
     NgSelect2Module,
     NgbPaginationModule, NgbAlertModule,
-    FormsModule
+    FormsModule,
+    MatSlideToggleModule,
+    NgxMaterialTimepickerModule
   ]
 })
 export class HumanResourceModule { }

@@ -10,6 +10,17 @@
     vertical-align: middle;
 }
 
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.example-margin {
+    margin: 10px;
+}
+
 
 /* .input-group .form-control2 {
     width: 222px;

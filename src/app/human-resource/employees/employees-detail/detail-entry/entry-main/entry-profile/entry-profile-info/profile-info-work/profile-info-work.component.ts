@@ -7,6 +7,7 @@ import {
   NgbDateParserFormatter,
   NgbDateStruct
 } from '@ng-bootstrap/ng-bootstrap';
+import {ThemePalette} from '@angular/material/core';
 @Injectable()
 export class CustomDateParserFormatter extends NgbDateParserFormatter {
   readonly DELIMITER = '/';
@@ -64,9 +65,11 @@ export class ProfileInfoWorkComponent implements OnInit {
     private ngbCalendar: NgbCalendar,
      private dateAdapter: NgbDateAdapter<string>
   ) { }
+  //
   get today() {
     return this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
   }
+  //
   triggerModal(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((res) => {
       this.closeModal = `Closed with: ${res}`;
@@ -83,6 +86,18 @@ export class ProfileInfoWorkComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+
+  //
+    name = 'slideToggle';
+    id = 'materialSlideToggle';
+    color: ThemePalette = 'accent';
+    checked = false;
+    disabled = false;
+    label = 'Toggle On/Off';
+    labelledby = 'Some Other Text';
+    onChange(value: boolean) {
+    }
+
   ngOnInit(): void {
     this.exampleData = [
       {
