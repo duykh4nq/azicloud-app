@@ -50,18 +50,26 @@ export class ProfileInfoWorkComponent implements OnInit {
   public exampleData6: Array<Select2OptionData>;
   public exampleData7: Array<Select2OptionData>;
   public exampleData8: Array<Select2OptionData>;
+  public exampleData9: Array<Select2OptionData>;
   model1: String;
   model2: String;
   model3: String;
   model4: String;
   model5: String;
-  constructor(
-    private ngbCalendar: NgbCalendar,
-    private dateAdapter: NgbDateAdapter<string>, private modalService: NgbModal
-  ) { }
-
+  model6: string;
+  model7: String;
+  model8: string;
   closeModal: string;
-
+  constructor(
+    private modalService: NgbModal,
+    private ngbCalendar: NgbCalendar,
+    private dateAdapter: NgbDateAdapter<string>
+  ) { }
+  //
+  get today() {
+    return this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
+  }
+  //
   triggerModal(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((res) => {
       this.closeModal = `Closed with: ${res}`;
@@ -69,7 +77,6 @@ export class ProfileInfoWorkComponent implements OnInit {
       this.closeModal = `Dismissed ${this.getDismissReason(res)}`;
     });
   }
-
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
@@ -79,9 +86,23 @@ export class ProfileInfoWorkComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
-  get today() {
-    return this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
+
+  // name = 'slideToggle';
+  // id = 'materialSlideToggle';
+  //color: ThemePalette = 'primary';
+  checked = false;
+  disabled = false;
+  label = 'Toggle On/Off';
+  labelledby = 'Some Other Text';
+  onChange(value: boolean) {
   }
+
+  // private exportTime = { hour: 7, minute: 15, meriden: 'PM', format: 24 };
+
+  // onChangeHour(event) {
+  //   console.log('event', event);
+  // }
+
   ngOnInit(): void {
     this.exampleData = [
       {
@@ -195,6 +216,20 @@ export class ProfileInfoWorkComponent implements OnInit {
       {
         id: 'Afghanistan',
         text: 'Afghanistan'
+      }
+    ];
+    this.exampleData9 = [
+      {
+        id: 'United States',
+        text: 'Sang'
+      },
+      {
+        id: 'United Kingdom',
+        text: 'Toi'
+      },
+      {
+        id: 'Afghanistan',
+        text: 'Khuya'
       }
     ];
   }

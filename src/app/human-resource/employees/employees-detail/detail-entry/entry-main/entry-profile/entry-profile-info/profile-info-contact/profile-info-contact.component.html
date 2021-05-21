@@ -90,7 +90,7 @@
               <ng-select2
                 class="chosen-select"
                 [data]="exampleData"
-                [width]="420"
+                [width]="320"
                 tabindex="2"
                 [placeholder]="'chọn loại chức danh..'"
               >
@@ -278,7 +278,6 @@
       <h5>NGƯỜI PHỤ THUỘC</h5>
       <div class="ibox-tools">
         <a
-          type="button"
           data-toggle="modal"
           data-target="#myModal6"
           data-backdrop="static"
@@ -308,7 +307,7 @@
               <td class="contact-type"><i class="fa fa-envelope"> </i></td>
               <td>gravida@rbisit.com</td>
               <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
+                <a href=" " class="btn btn-default btn-xs">Sửa</a>
               </td>
             </tr>
             <tr>
@@ -317,7 +316,7 @@
               <td class="contact-type"><i class="fa fa-envelope"> </i></td>
               <td>rooney@proin.com</td>
               <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
+                <a href=" " class="btn btn-default btn-xs">Sửa</a>
               </td>
             </tr>
             <tr>
@@ -326,7 +325,7 @@
               <td class="contact-type"><i class="fa fa-phone"> </i></td>
               <td>+432 955 908</td>
               <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
+                <a href=" " class="btn btn-default btn-xs">Sửa</a>
               </td>
             </tr>
           </tbody>
@@ -335,12 +334,12 @@
     </div>
   </div>
 </div>
-<ng-template #content let-c="close" let-d="dismiss">
+<ng-template #content let-c="close " let-d="dismiss ">
   <div
-    id="popup-employee-create"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
+    id="popup-employee-create "
+    tabindex="-1 "
+    role="dialog "
+    aria-hidden="true "
   >
     <div class="modal-content">
       <div class="modal-header">
@@ -353,8 +352,8 @@
               <label class="font-normal">Họ và tên</label>
               <div class="input-group">
                 <input
-                  type="text"
-                  placeholder="Nhập họ và tên người thân"
+                  type="text "
+                  placeholder="Nhập họ và tên người thân "
                   class="form-control"
                 />
               </div>
@@ -362,169 +361,200 @@
             <div class="form-group">
               <label class="font-normal">Giới tính</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn giới tính..."
+                <ng-select2
                   class="chosen-select"
+                  [data]="exampleData"
+                  [width]="205"
                   tabindex="2"
+                  [placeholder]="'chọn loại chức danh..'"
                 >
-                  <option value="">Chọn</option>
-                  <option value="United States">Nam</option>
-                  <option value="United Kingdom">Nữ</option>
-                  <option value="Afghanistan">Chưa xác định</option>
-                </select>
+                </ng-select2>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Quốc tịch</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn quốc gia..."
+                <ng-select2
                   class="chosen-select"
+                  [data]="exampleData"
+                  [width]="205"
                   tabindex="2"
+                  [placeholder]="'chọn loại chức danh..'"
                 >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
+                </ng-select2>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Quận/ Huyện</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn quận/ huyện..."
+                <ng-select2
                   class="chosen-select"
+                  [data]="exampleData"
+                  [width]="205"
                   tabindex="2"
+                  [placeholder]="'chọn loại chức danh..'"
                 >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
+                </ng-select2>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Số CMND/Hộ chiếu</label>
               <div class="input-group">
                 <input
-                  type="text"
-                  placeholder="Nhập số cmnd/hộ chiếu người thân"
+                  type="text "
+                  placeholder="Nhập số cmnd/hộ chiếu người thân "
                   class="form-control"
                 />
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Ngày bắt đầu</label>
-              <div class="input-group date">
-                <span class="input-group-addon"
-                  ><i class="fa fa-calendar"></i></span
-                ><input
-                  type="text"
-                  class="form-control"
-                  placeholder="Chọn ngày bắt đầu"
-                  value="03/04/2014"
-                />
-              </div>
+              <form class="form-inline">
+                <div class="form-group date">
+                  <div class="input-group">
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline calendar"
+                        (click)="d1.toggle()"
+                        type="button"
+                      >
+                        <i class="fa fa-calendar"></i>
+                      </button>
+                    </div>
+                    <input
+                      class="form-control"
+                      style="width: 165px"
+                      placeholder="dd/mm/yyyy"
+                      name="d1"
+                      #c1="ngModel"
+                      [(ngModel)]="model1"
+                      ngbDatepicker
+                      #d1="ngbDatepicker"
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="form-group">
               <label class="font-normal">Ngày sinh</label>
-              <div class="input-group date">
-                <span class="input-group-addon"
-                  ><i class="fa fa-calendar"></i></span
-                ><input
-                  type="text"
-                  class="form-control"
-                  placeholder="Chọn ngày sinh"
-                  value="03/04/2014"
-                />
-              </div>
+              <form class="form-inline">
+                <div class="form-group date">
+                  <div class="input-group">
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline calendar"
+                        (click)="d2.toggle()"
+                        type="button"
+                      >
+                        <i class="fa fa-calendar"></i>
+                      </button>
+                    </div>
+                    <input
+                      class="form-control"
+                      style="width: 165px"
+                      placeholder="dd/mm/yyyy"
+                      name="d2"
+                      #c1="ngModel"
+                      [(ngModel)]="model2"
+                      ngbDatepicker
+                      #d2="ngbDatepicker"
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
             <div class="form-group">
               <label class="font-normal">Mối quan hệ</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn mối quan hệ..."
+                <ng-select2
                   class="chosen-select"
-                  tabindex="4"
+                  [data]="exampleData"
+                  [width]="205"
+                  tabindex="2"
+                  [placeholder]="'chọn loại chức danh..'"
                 >
-                  <option value="">Chọn</option>
-                  <option value="United States">Cha/mẹ</option>
-                  <option value="United Kingdom">Anh/em</option>
-                  <option value="Afghanistan">Con</option>
-                  <option value="Afghanistan">Ông/bà</option>
-                  <option value="Afghanistan">Cô/chú</option>
-                </select>
+                </ng-select2>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Tỉnh/ Thành phố</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn tỉnh/ thành phố..."
+                <ng-select2
                   class="chosen-select"
+                  [data]="exampleData"
+                  [width]="205"
                   tabindex="2"
+                  [placeholder]="'chọn loại chức danh..'"
                 >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
+                </ng-select2>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Phường/ Xã</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn phường/ xã..."
+                <ng-select2
                   class="chosen-select"
+                  [data]="exampleData"
+                  [width]="205"
                   tabindex="2"
+                  [placeholder]="'chọn loại chức danh..'"
                 >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
+                </ng-select2>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Mã số thuế cá nhân</label>
               <div class="input-group">
                 <input
-                  type="text"
-                  placeholder="Nhập mã số thuế cá nhân người thân"
+                  type="text "
+                  placeholder="Nhập mã số thuế cá nhân người thân "
                   class="form-control"
                 />
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Ngày kết thúc</label>
-              <div class="input-group date">
-                <span class="input-group-addon"
-                  ><i class="fa fa-calendar"></i></span
-                ><input
-                  type="text"
-                  class="form-control"
-                  placeholder="Chọn ngày kết thúc"
-                  value="03/04/2014"
-                />
-              </div>
+              <form class="form-inline">
+                <div class="form-group date">
+                  <div class="input-group">
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline calendar"
+                        (click)="d3.toggle()"
+                        type="button"
+                      >
+                        <i class="fa fa-calendar"></i>
+                      </button>
+                    </div>
+                    <input
+                      class="form-control"
+                      style="width: 165px"
+                      placeholder="dd/mm/yyyy"
+                      name="d3"
+                      #c3="ngModel"
+                      [(ngModel)]="model3"
+                      ngbDatepicker
+                      #d3="ngbDatepicker"
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <button
-          type="button"
+          type="button "
           class="btn btn-white min-w-100"
-          data-dismiss="modal"
+          data-dismiss="modal "
           (click)="d('Cross click')"
         >
           Hủy
         </button>
-        <button type="button" class="btn btn-primary min-w-100">
+        <button type="button " class="btn btn-primary min-w-100">
           Lưu thay đổi
         </button>
       </div>

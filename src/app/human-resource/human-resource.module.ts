@@ -37,7 +37,19 @@ import { WorkFormatMemberComponent } from './employees/employees-detail/detail-e
 import { WorkFormatListComponent } from './employees/employees-detail/detail-entry/entry-main/entry-working/entry-work-list/work-display-format/work-format-list/work-format-list.component';
 import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FullCalendarModule } from '@fullcalendar/angular'; // the main connector. must go first
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin
+import { SlideToggleModule } from 'ngx-slide-toggle';
+import { NgxPaginationModule } from 'ngx-pagination';
+
+FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin
+]);
+
+
 @NgModule({
   declarations: [
     EmployeesComponent,
@@ -72,7 +84,7 @@ import { FormsModule } from '@angular/forms';
     EntryWorkListComponent,
     WorkFormatKanbanComponent,
     WorkFormatMemberComponent,
-    WorkFormatListComponent
+    WorkFormatListComponent,
   ],
   imports: [
     CommonModule,
@@ -80,7 +92,10 @@ import { FormsModule } from '@angular/forms';
     NgbModule,
     NgSelect2Module,
     NgbPaginationModule, NgbAlertModule,
-    FormsModule
+    FormsModule, ReactiveFormsModule,
+    FullCalendarModule,
+    SlideToggleModule,
+    NgxPaginationModule
   ]
 })
 export class HumanResourceModule { }

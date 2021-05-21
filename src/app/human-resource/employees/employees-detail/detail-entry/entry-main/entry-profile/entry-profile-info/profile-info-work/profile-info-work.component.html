@@ -509,6 +509,7 @@
     </div>
   </div>
 </div>
+
 <ng-template #calendar let-c="close" let-d="dismiss">
   <div tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
@@ -521,16 +522,16 @@
             <div class="form-group">
               <label class="font-normal">Ca làm việc</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn ca làm việc..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Nam</option>
-                  <option value="United Kingdom">Nữ</option>
-                  <option value="Afghanistan">Chưa xác định</option>
-                </select>
+                <div class="input-group">
+                  <ng-select2
+                    class="chosen-select"
+                    [data]="exampleData9"
+                    [width]="420"
+                    tabindex="2"
+                    placeholder="Chon ca lam viec.."
+                  >
+                  </ng-select2>
+                </div>
               </div>
             </div>
           </div>
@@ -544,31 +545,50 @@
               <div class="panel-body">
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label">Thứ 2</label>
-                  <div class="col-lg-3 mt-7">
-                    <input type="checkbox" class="js-switch" checked />
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="input-group clockpicker" data-autoclose="true">
-                      <input type="text" class="form-control" value="09:30" />
-                      <span class="input-group-addon">
-                        <span class="fa fa-clock-o"></span>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="input-group clockpicker" data-autoclose="true">
-                      <input type="text" class="form-control" value="09:30" />
-                      <span class="input-group-addon">
-                        <span class="fa fa-clock-o"></span>
-                      </span>
-                    </div>
-                  </div>
+                  <section class="example-section">
+                    <material-slide-toggle
+                      [checked]="checked"
+                      [disabled]="disabled"
+                      [aria-label]="label"
+                      [aria-labelledby]="labelledby"
+                      (change)="onChange($event)"
+                    >
+                    </material-slide-toggle>
+                    <!-- <mat-slide-toggle class="example-margin" [name]="name3" [id]="id3" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
+                                      </mat-slide-toggle> -->
+                  </section>
+
+                  <!-- <div class="col-lg-3">
+                                      <div class="input-group clockpicker" data-autoclose="true">
+                                          <input type="text" class="form-control" value="09:30" />
+                                          <span class="input-group-addon">
+                      <span class="fa fa-clock-o"></span>
+                                          </span>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-3">
+                                      <div class="input-group clockpicker" data-autoclose="true">
+                                          <input type="text" class="form-control" value="09:30" />
+                                          <span class="input-group-addon">
+                      <span class="fa fa-clock-o"></span>
+                                          </span>
+                                      </div>
+                                  </div> -->
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label">Thứ 3</label>
-                  <div class="col-lg-3 mt-7">
-                    <input type="checkbox" class="js-switch" checked />
-                  </div>
+                  <section class="example-section">
+                    <material-slide-toggle
+                      [checked]="checked"
+                      [disabled]="disabled"
+                      [aria-label]="label"
+                      [aria-labelledby]="labelledby"
+                      (change)="onChange($event)"
+                    >
+                    </material-slide-toggle>
+                    <!-- <mat-slide-toggle class="example-margin" [name]="name3" [id]="id3" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
+                                      </mat-slide-toggle> -->
+                  </section>
                   <div class="col-lg-3">
                     <div class="input-group clockpicker" data-autoclose="true">
                       <input type="text" class="form-control" value="09:30" />
@@ -588,9 +608,18 @@
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label">Thứ 4</label>
-                  <div class="col-lg-3 mt-7">
-                    <input type="checkbox" class="js-switch" checked />
-                  </div>
+                  <section class="example-section">
+                    <material-slide-toggle
+                      [checked]="checked"
+                      [disabled]="disabled"
+                      [aria-label]="label"
+                      [aria-labelledby]="labelledby"
+                      (change)="onChange($event)"
+                    >
+                    </material-slide-toggle>
+                    <!-- <mat-slide-toggle class="example-margin" [name]="name4" [id]="id4" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
+                                      </mat-slide-toggle> -->
+                  </section>
                   <div class="col-lg-3">
                     <div class="input-group clockpicker" data-autoclose="true">
                       <input type="text" class="form-control" value="09:30" />
@@ -610,9 +639,18 @@
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label">Thứ 5</label>
-                  <div class="col-lg-3 mt-7">
-                    <input type="checkbox" class="js-switch" checked />
-                  </div>
+                  <section class="example-section">
+                    <material-slide-toggle
+                      [checked]="checked"
+                      [disabled]="disabled"
+                      [aria-label]="label"
+                      [aria-labelledby]="labelledby"
+                      (change)="onChange($event)"
+                    >
+                    </material-slide-toggle>
+                    <!-- <mat-slide-toggle class="example-margin" [name]="name5" [id]="id5" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
+                                      </mat-slide-toggle> -->
+                  </section>
                   <div class="col-lg-3">
                     <div class="input-group clockpicker" data-autoclose="true">
                       <input type="text" class="form-control" value="09:30" />
@@ -632,9 +670,19 @@
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label">Thứ 6</label>
-                  <div class="col-lg-3 mt-7">
-                    <input type="checkbox" class="js-switch" checked />
-                  </div>
+                  <section class="example-section">
+                    <material-slide-toggle
+                      [checked]="checked"
+                      [disabled]="disabled"
+                      [aria-label]="label"
+                      [aria-labelledby]="labelledby"
+                      (change)="onChange($event)"
+                    >
+                    </material-slide-toggle>
+
+                    <!-- <mat-slide-toggle class="example-margin" [name]="name6" [id]="id6" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
+                                      </mat-slide-toggle> -->
+                  </section>
                   <div class="col-lg-3">
                     <div class="input-group clockpicker" data-autoclose="true">
                       <input type="text" class="form-control" value="09:30" />
@@ -654,9 +702,18 @@
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label">Thứ 7</label>
-                  <div class="col-lg-3 mt-7">
-                    <input type="checkbox" class="js-switch" />
-                  </div>
+                  <section class="example-section">
+                    <material-slide-toggle
+                      [checked]="checked"
+                      [disabled]="disabled"
+                      [aria-label]="label"
+                      [aria-labelledby]="labelledby"
+                      (change)="onChange($event)"
+                    >
+                    </material-slide-toggle>
+                    <!-- <mat-slide-toggle class="example-margin" [name]="name7" [id]="id7" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
+                                      </mat-slide-toggle> -->
+                  </section>
                   <div class="col-lg-3">
                     <div class="input-group clockpicker" data-autoclose="true">
                       <input type="text" class="form-control" value="09:30" />
@@ -676,9 +733,18 @@
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label">Chủ nhật</label>
-                  <div class="col-lg-3 mt-7">
-                    <input type="checkbox" class="js-switch" />
-                  </div>
+                  <section class="example-section">
+                    <material-slide-toggle
+                      [checked]="checked"
+                      [disabled]="disabled"
+                      [aria-label]="label"
+                      [aria-labelledby]="labelledby"
+                      (change)="onChange($event)"
+                    >
+                    </material-slide-toggle>
+                    <!-- <mat-slide-toggle class="example-margin" [name]="namecn" [id]="idcn" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
+                                      </mat-slide-toggle> -->
+                  </section>
                   <div class="col-lg-3">
                     <div class="input-group clockpicker" data-autoclose="true">
                       <input type="text" class="form-control" value="09:30" />
@@ -704,16 +770,31 @@
           <div class="col-lg-6">
             <div class="form-group">
               <label class="font-normal">Ngày áp dụng</label>
-              <div class="input-group date">
-                <span class="input-group-addon"
-                  ><i class="fa fa-calendar"></i></span
-                ><input
-                  type="text"
-                  class="form-control"
-                  placeholder="Chọn ngày áp dụng"
-                  value="03/04/2014"
-                />
-              </div>
+              <form class="form-inline">
+                <div class="form-group date">
+                  <div class="input-group">
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline calendar"
+                        (click)="d6.toggle()"
+                        type="button"
+                      >
+                        <i class="fa fa-calendar"></i>
+                      </button>
+                    </div>
+                    <input
+                      class="form-control"
+                      style="width: 170px"
+                      placeholder="dd/mm/yyyy"
+                      name="d6"
+                      #c6="ngModel"
+                      [(ngModel)]="model6"
+                      ngbDatepicker
+                      #d6="ngbDatepicker"
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
           <div class="col-lg-6">
@@ -760,151 +841,180 @@
             <div class="form-group">
               <label class="font-normal">Chức danh</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn chức danh.."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Trưởng phòng kinh doanh</option>
-                  <option value="United Kingdom">Lập trình Mobile Apps</option>
-                  <option value="Afghanistan">Nghỉ</option>
-                </select>
+                <div class="input-group">
+                  <ng-select2
+                    class="chosen-select"
+                    [data]="exampleData9"
+                    [width]="205"
+                    tabindex="2"
+                    placeholder="Chon ca lam viec.."
+                  >
+                  </ng-select2>
+                </div>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Loại việc làm</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn loại việc làm..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Toàn thời gian</option>
-                  <option value="United Kingdom">Bán thời gian</option>
-                  <option value="Afghanistan">Thực tập</option>
-                </select>
+                <div class="input-group">
+                  <ng-select2
+                    class="chosen-select"
+                    [data]="exampleData9"
+                    [width]="205"
+                    tabindex="2"
+                    placeholder="Chon ca lam viec.."
+                  >
+                  </ng-select2>
+                </div>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Công ty</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn công ty..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
+                <div class="input-group">
+                  <ng-select2
+                    class="chosen-select"
+                    [data]="exampleData9"
+                    [width]="205"
+                    tabindex="2"
+                    placeholder="Chon ca lam viec.."
+                  >
+                  </ng-select2>
+                </div>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Phòng ban</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn phòng ban..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
+                <div class="input-group">
+                  <ng-select2
+                    class="chosen-select"
+                    [data]="exampleData9"
+                    [width]="205"
+                    tabindex="2"
+                    placeholder="Chon ca lam viec.."
+                  >
+                  </ng-select2>
+                </div>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Ngày bắt đầu</label>
-              <div class="input-group date">
-                <span class="input-group-addon"
-                  ><i class="fa fa-calendar"></i></span
-                ><input
-                  type="text"
-                  class="form-control"
-                  placeholder="Chọn ngày bắt đầu"
-                  value="03/04/2014"
-                />
-              </div>
+              <form class="form-inline">
+                <div class="form-group date">
+                  <div class="input-group">
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline calendar"
+                        (click)="d7.toggle()"
+                        type="button"
+                      >
+                        <i class="fa fa-calendar"></i>
+                      </button>
+                    </div>
+                    <input
+                      class="form-control"
+                      style="width: 170px"
+                      placeholder="dd/mm/yyyy"
+                      name="d7"
+                      #c7="ngModel"
+                      [(ngModel)]="model7"
+                      ngbDatepicker
+                      #d7="ngbDatepicker"
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="form-group">
               <label class="font-normal">Tình trạng</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn tình trạng.."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Thực tập</option>
-                  <option value="United Kingdom">Thử việc</option>
-                  <option value="Afghanistan">Nghỉ</option>
-                </select>
+                <div class="input-group">
+                  <ng-select2
+                    class="chosen-select"
+                    [data]="exampleData9"
+                    [width]="205"
+                    tabindex="2"
+                    placeholder="Chon ca lam viec.."
+                  >
+                  </ng-select2>
+                </div>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Nhóm công việc</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn nhóm công việc..."
-                  multiple
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Nhân viên</option>
-                  <option value="United Kingdom">Quản lý</option>
-                  <option value="Afghanistan">Đào tạo</option>
-                </select>
+                <div class="input-group">
+                  <ng-select2
+                    class="chosen-select"
+                    [data]="exampleData9"
+                    [width]="205"
+                    tabindex="2"
+                    placeholder="Chon ca lam viec.."
+                  >
+                  </ng-select2>
+                </div>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Chi nhánh</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn chi nhánh..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
+                <div class="input-group">
+                  <ng-select2
+                    class="chosen-select"
+                    [data]="exampleData9"
+                    [width]="205"
+                    tabindex="2"
+                    placeholder="Chon ca lam viec.."
+                  >
+                  </ng-select2>
+                </div>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Người quản lý trực tiếp</label>
               <div class="input-group">
-                <select
-                  data-placeholder="Chọn người quản lý trực tiếp..."
-                  class="chosen-select"
-                  tabindex="2"
-                >
-                  <option value="">Chọn</option>
-                  <option value="United States">Việt nam</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                </select>
+                <div class="input-group">
+                  <ng-select2
+                    class="chosen-select"
+                    [data]="exampleData9"
+                    [width]="205"
+                    tabindex="2"
+                    placeholder="Chon ca lam viec.."
+                  >
+                  </ng-select2>
+                </div>
               </div>
             </div>
             <div class="form-group">
               <label class="font-normal">Ngày kết thúc</label>
-              <div class="input-group date">
-                <span class="input-group-addon"
-                  ><i class="fa fa-calendar"></i></span
-                ><input
-                  type="text"
-                  class="form-control"
-                  placeholder="Chọn ngày kết thúc"
-                  value="03/04/2014"
-                />
-              </div>
+              <form class="form-inline">
+                <div class="form-group date">
+                  <div class="input-group">
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline calendar"
+                        (click)="d8.toggle()"
+                        type="button"
+                      >
+                        <i class="fa fa-calendar"></i>
+                      </button>
+                    </div>
+                    <input
+                      class="form-control"
+                      style="width: 170px"
+                      placeholder="dd/mm/yyyy"
+                      name="d8"
+                      #c8="ngModel"
+                      [(ngModel)]="model8"
+                      ngbDatepicker
+                      #d8="ngbDatepicker"
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

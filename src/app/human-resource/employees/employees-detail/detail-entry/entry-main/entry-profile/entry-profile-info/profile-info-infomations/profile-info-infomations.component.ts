@@ -6,6 +6,7 @@ import {
   NgbDateParserFormatter,
   NgbDateStruct
 } from '@ng-bootstrap/ng-bootstrap';
+
 @Injectable()
 export class CustomDateParserFormatter extends NgbDateParserFormatter {
   readonly DELIMITER = '/';
@@ -40,17 +41,36 @@ export class CustomDateParserFormatter extends NgbDateParserFormatter {
 export class ProfileInfoInfomationsComponent implements OnInit {
 
   model1: String;
-    model2: String;
-    model3: String;
-    model4: String;
-    model5: String;
+  model2: String;
+  model3: String;
+  model4: String;
+  model5: String;
   public exampleData: Array<Select2OptionData>;
-  constructor(private ngbCalendar: NgbCalendar,
+  constructor(
+    private ngbCalendar: NgbCalendar,
     private dateAdapter: NgbDateAdapter<string>) { }
 
-    get today() {
-      return this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
-    }
+  get today() {
+    return this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
+  }
+
+  name = 'slideToggle';
+  id = 'materialSlideToggle';
+  checked = false;
+  disabled = false;
+  label = 'Toggle On/Off';
+  labelledby = 'Some Other Text';
+  onChange(value: boolean) {
+  }
+  // name = 'slideToggle';
+  // id = 'materialSlideToggle';
+  // color: ThemePalette = 'accent';
+  // checked = false;
+  // disabled = false;
+  // label = 'Toggle On/Off';
+  // labelledby = 'Some Other Text';
+  // onChange(value: boolean) {
+  // }
   ngOnInit(): void {
     this.exampleData = [
       {

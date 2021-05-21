@@ -9,8 +9,45 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class EmployeesPaginationComponent {
   closeModal: string;
+  collection = { count: 60, data: [] };
+  config = {
+    id: 'custom',
+    itemsPerPage: 5,
+    currentPage: 1,
+    totalItems: this.collection.count
+  };
 
-  constructor(private modalService: NgbModal) { }
+  public maxSize: number = 7;
+  public directionLinks: boolean = true;
+  public autoHide: boolean = false;
+  public responsive: boolean = true;
+  public labels: any = {
+    previousLabel: '<--',
+    nextLabel: '-->',
+    screenReaderPaginationLabel: 'Pagination',
+    screenReaderPageLabel: 'page',
+    screenReaderCurrentLabel: `You're on page`
+  };
+
+  constructor(private modalService: NgbModal) {
+
+    //Create dummy data
+    for (var i = 0; i < this.collection.count; i++) {
+      this.collection.data.push(
+        {
+          id: i + 1,
+          value: "items number " + (i + 1)
+        }
+      );
+    }
+
+  }
+
+  onPageChange(event) {
+    console.log(event);
+    this.config.currentPage = event;
+  }
+
 
   triggerModal(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((res) => {
