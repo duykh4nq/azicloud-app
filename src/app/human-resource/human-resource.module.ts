@@ -40,6 +40,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { SlideToggleModule } from 'ngx-slide-toggle';
 
 
 
@@ -87,7 +88,8 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
     NgbPaginationModule, NgbAlertModule,
     FormsModule,
     MatSlideToggleModule,
-    NgxMaterialTimepickerModule
+    NgxMaterialTimepickerModule,
+    SlideToggleModule
   ]
 })
 export class HumanResourceModule { }

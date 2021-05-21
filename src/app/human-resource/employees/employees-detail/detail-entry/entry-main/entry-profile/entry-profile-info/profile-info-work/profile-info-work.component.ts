@@ -87,16 +87,21 @@ export class ProfileInfoWorkComponent implements OnInit {
     }
   }
 
-  //
-    name = 'slideToggle';
-    id = 'materialSlideToggle';
-    color: ThemePalette = 'accent';
+    // name = 'slideToggle';
+    // id = 'materialSlideToggle';
+    //color: ThemePalette = 'primary';
     checked = false;
     disabled = false;
     label = 'Toggle On/Off';
     labelledby = 'Some Other Text';
     onChange(value: boolean) {
     }
+
+    // private exportTime = { hour: 7, minute: 15, meriden: 'PM', format: 24 };
+
+    // onChangeHour(event) {
+    //   console.log('event', event);
+    // }
 
   ngOnInit(): void {
     this.exampleData = [
