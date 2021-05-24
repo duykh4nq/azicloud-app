@@ -40,10 +40,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { SlideToggleModule } from 'ngx-slide-toggle';
-import {TimepickerModule } from 'ngx-bootstrap/timepicker';
+// import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import { DatepickerModule, TimePickerModule } from 'ng-uikit-pro-standard'
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -85,7 +86,7 @@ FullCalendarModule.registerPlugins([
     EntryWorkListComponent,
     WorkFormatKanbanComponent,
     WorkFormatMemberComponent,
-    WorkFormatListComponent
+    WorkFormatListComponent,
   ],
   imports: [
     CommonModule,
@@ -96,8 +97,9 @@ FullCalendarModule.registerPlugins([
     FormsModule,
     NgxMaterialTimepickerModule,
     SlideToggleModule,
-    TimepickerModule.forRoot(),
-    FullCalendarModule
+    FullCalendarModule,
+    DatepickerModule,
+    TimePickerModule
   ]
 })
 export class HumanResourceModule { }

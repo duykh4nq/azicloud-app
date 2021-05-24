@@ -1,4 +1,5 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, ViewChild, ElementRef } from '@angular/core';
+import { IMyOptions, MDBDatePickerComponent, ClockPickerComponent } from 'ng-uikit-pro-standard';
 import { Select2OptionData } from 'ng-select2';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {
@@ -40,7 +41,22 @@ export class CustomDateParserFormatter extends NgbDateParserFormatter {
 })
 
 export class ProfileInfoWorkComponent implements OnInit {
+  @ViewChild('input', { static: true }) input: ElementRef;
+  @ViewChild('datePicker', { static: true }) datePicker: MDBDatePickerComponent;
+  @ViewChild('timePicker', { static: true }) timePicker: ClockPickerComponent;
 
+  public myDatePickerOptions: IMyOptions = {
+    // Your options
+  };
+  onDateChange = (event: { actualDateFormatted: string; }) => {
+    this.input.nativeElement.value = event.actualDateFormatted; // set value to input
+    this.datePicker.closeBtnClicked(); // close date picker
+    this.timePicker.openBtnClicked(); // open time picker
+  };
+
+  onTimeChange = (event: string) => {
+    this.input.nativeElement.value = `${this.input.nativeElement.value}, ${event}`; // set value to input
+  };
 
   public exampleData: Array<Select2OptionData>;
   public exampleData2: Array<Select2OptionData>;
@@ -63,7 +79,7 @@ export class ProfileInfoWorkComponent implements OnInit {
   constructor(
     private modalService: NgbModal,
     private ngbCalendar: NgbCalendar,
-     private dateAdapter: NgbDateAdapter<string>
+    private dateAdapter: NgbDateAdapter<string>
   ) { }
   //
   get today() {
@@ -87,24 +103,24 @@ export class ProfileInfoWorkComponent implements OnInit {
     }
   }
 
-    // name = 'slideToggle';
-    // id = 'materialSlideToggle';
-    //color: ThemePalette = 'primary';
-    checked = false;
-    disabled = false;
-    label = 'Toggle On/Off';
-    labelledby = 'Some Other Text';
+  // name = 'slideToggle';
+  // id = 'materialSlideToggle';
+  //color: ThemePalette = 'primary';
+  checked = false;
+  disabled = false;
+  label = 'Toggle On/Off';
+  labelledby = 'Some Other Text';
 
-    time: Date = new Date();
+  time: Date = new Date();
 
-    onChange(value: boolean) {
-    }
+  onChange(value: boolean) {
+  }
 
-    // private exportTime = { hour: 7, minute: 15, meriden: 'PM', format: 24 };
+  // private exportTime = { hour: 7, minute: 15, meriden: 'PM', format: 24 };
 
-    onChangeHour(event) {
-      console.log('event', event);
-    }
+  onChangeHour(event) {
+    console.log('event', event);
+  }
 
   ngOnInit(): void {
     this.exampleData = [

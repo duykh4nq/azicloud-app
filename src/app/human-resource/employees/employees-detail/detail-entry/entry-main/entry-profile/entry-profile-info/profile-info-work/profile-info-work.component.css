@@ -1,6 +1,5 @@
 @import "../../../../../../employees.component.css";
 @import '../../../../../../../../../assets/css/plugins/select2/select2.min.css';
-
 /* .ng-select2 {
     word-wrap: normal;
     width: 420px;
@@ -25,4 +24,11 @@
 
 .example-margin {
     margin: 10px;
+}
+
+.modal-content {
+    margin-left: -50px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
 }

@@ -28,6 +28,6 @@ b {
 
 .fc {
     /* the calendar root */
-    width: 900px;
+    min-width: 760px;
     margin: 0 auto;
 }

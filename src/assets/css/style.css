@@ -5283,7 +5283,7 @@ video {
     background: #f8fafb;
 }
 
-.inmodal .modal-header {
+.modal-header {
     padding: 30px 15px;
     text-align: center;
     display: block;
@@ -11425,19 +11425,23 @@ body.md-skin {
 
 /* Window Popup */
 
-.inmodal.window-center .modal-header {
+.modal-header {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: normal;
     padding: 10px 15px;
 }
 
-.inmodal.window-center .modal-footer {
+.modal-footer {
     justify-content: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 .inmodal.window-center .select2-container {
     width: 100% !important;
 }
 
-.inmodal.window-center .modal-title {
+.modal-title {
     font-size: 18px;
     font-weight: normal;
 }
