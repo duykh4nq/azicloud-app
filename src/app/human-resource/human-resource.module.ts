@@ -37,13 +37,15 @@ import { WorkFormatMemberComponent } from './employees/employees-detail/detail-e
 import { WorkFormatListComponent } from './employees/employees-detail/detail-entry/entry-main/entry-working/entry-work-list/work-display-format/work-format-list/work-format-list.component';
 import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { SlideToggleModule } from 'ngx-slide-toggle';
 import {TimepickerModule } from 'ngx-bootstrap/timepicker';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import { NgxEditorModule } from "ngx-editor";
+
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -94,10 +96,13 @@ FullCalendarModule.registerPlugins([
     NgSelect2Module,
     NgbPaginationModule, NgbAlertModule,
     FormsModule,
+    ReactiveFormsModule,
     NgxMaterialTimepickerModule,
     SlideToggleModule,
     TimepickerModule.forRoot(),
-    FullCalendarModule
+    FullCalendarModule,
+    NgxEditorModule
+
   ]
 })
 export class HumanResourceModule { }
