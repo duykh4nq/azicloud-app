@@ -731,3 +731,15 @@
         </div>
     </div>
 </ng-template>
+<input [ngxTimepicker]="picker">
+<ngx-material-timepicker #picker></ngx-material-timepicker>
+
+
+<div class="toggle-example">
+    <input [ngxTimepicker]="toggleTimepicker" [disableClick]="true" readonly>
+    <ngx-material-timepicker-toggle [for]="toggleTimepicker"></ngx-material-timepicker-toggle>
+    <ngx-material-timepicker #toggleTimepicker></ngx-material-timepicker>
+</div>
+
+<timepicker [(ngModel)]="time"></timepicker>
+<pre class="alert alert-info">Time is: {{time}}</pre>

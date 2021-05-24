@@ -7,7 +7,7 @@ import {
   NgbDateParserFormatter,
   NgbDateStruct
 } from '@ng-bootstrap/ng-bootstrap';
-import {ThemePalette} from '@angular/material/core';
+// import {ThemePalette} from '@angular/material/core';
 @Injectable()
 export class CustomDateParserFormatter extends NgbDateParserFormatter {
   readonly DELIMITER = '/';
@@ -94,14 +94,17 @@ export class ProfileInfoWorkComponent implements OnInit {
     disabled = false;
     label = 'Toggle On/Off';
     labelledby = 'Some Other Text';
+
+    time: Date = new Date();
+
     onChange(value: boolean) {
     }
 
     // private exportTime = { hour: 7, minute: 15, meriden: 'PM', format: 24 };
 
-    // onChangeHour(event) {
-    //   console.log('event', event);
-    // }
+    onChangeHour(event) {
+      console.log('event', event);
+    }
 
   ngOnInit(): void {
     this.exampleData = [

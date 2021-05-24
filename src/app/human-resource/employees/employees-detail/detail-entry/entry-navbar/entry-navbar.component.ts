@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntryNavbarComponent implements OnInit {
 
+  active_id='active';
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onclick(){
+    this.active_id='';
   }
 
 }

@@ -1,1 +1,26 @@
 @import "../../../../employees/employees.component.css";
+.nav-tabs>li>a {
+    color: black;
+    padding: 10px 20px 10px 25px;
+    height: 49.2px;
+}
+
+.nav-tabs>li>a:hover {
+    color: #007bff;
+    border-bottom: 5px solid #007bff;
+    /* color: #34499d;*/
+}
+
+#active {
+    background: #fff;
+    border: none;
+    color: #34499d;
+    border-bottom: 5px solid #34499d;
+}
+
+.nav-tabs>li>a:focus {
+    background: #fff;
+    border: none;
+    color: #34499d;
+    border-bottom: 5px solid #34499d;
+}
