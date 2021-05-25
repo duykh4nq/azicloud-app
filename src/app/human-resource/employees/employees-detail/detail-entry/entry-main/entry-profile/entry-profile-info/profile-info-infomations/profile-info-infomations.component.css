@@ -1,13 +1,13 @@
 @import "../../../../../../employees.component.css";
-.input-group .btn {
+.input-group-append .btn {
     border: 1px solid #dbdddf;
-    font-size: 0.9rem;
+    width: 45px;
+    font-size: 1rem;
+    border-radius: 0;
 }
 
 .form-inline .form-control {
-    display: inline-block;
-    width: 382px;
-    vertical-align: middle;
+    width: calc(100% - 45px);
 }
 
 .example-section {
@@ -20,18 +20,3 @@
 .example-margin {
     margin: 10px;
 }
-
-
-/* .input-group .form-control2 {
-    width: 222px;
-    border: 1px solid #dbdddf;
-}
-
-.input-group .form-control2:focus {
-    outline: #34499d auto 0.9em;
-    border-radius: 0px;
-}
-
-.select2-dropdown input:focus {
-    outline: none;
-} */

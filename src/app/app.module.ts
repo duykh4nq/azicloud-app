@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { NgxEditorModule } from 'ngx-editor';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     NgbModule,
     NgxMaterialTimepickerModule. setLocale ( ' ar-AE ' ),
     BrowserAnimationsModule,
-    FullCalendarModule
+    FullCalendarModule,
+    NgxEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

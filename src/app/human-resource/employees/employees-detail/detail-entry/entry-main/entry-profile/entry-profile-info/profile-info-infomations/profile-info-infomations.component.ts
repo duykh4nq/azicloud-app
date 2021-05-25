@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { Select2OptionData } from 'ng-select2';
 import {
   NgbCalendar,
@@ -6,7 +6,9 @@ import {
   NgbDateParserFormatter,
   NgbDateStruct
 } from '@ng-bootstrap/ng-bootstrap';
-// import {ThemePalette} from '@angular/material/core';
+import { Validators, Editor, Toolbar } from 'ngx-editor';
+import { AbstractControl, FormControl, FormGroup } from "@angular/forms";
+import jsonDoc from "./doc";
 
 @Injectable()
 export class CustomDateParserFormatter extends NgbDateParserFormatter {
@@ -23,7 +25,6 @@ export class CustomDateParserFormatter extends NgbDateParserFormatter {
     }
     return null;
   }
-
   format(date: NgbDateStruct | null): string {
     return date
       ? date.day + this.DELIMITER + date.month + this.DELIMITER + date.year
@@ -31,48 +32,68 @@ export class CustomDateParserFormatter extends NgbDateParserFormatter {
   }
 }
 
+
 @Component({
   selector: 'app-profile-info-infomations',
   templateUrl: './profile-info-infomations.component.html',
   styleUrls: ['./profile-info-infomations.component.css'],
   providers: [
     { provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter }
-  ]
+  ],
+  encapsulation: ViewEncapsulation.None
 })
-export class ProfileInfoInfomationsComponent implements OnInit {
+export class ProfileInfoInfomationsComponent implements OnInit, OnDestroy {
 
   model1: String;
-    model2: String;
-    model3: String;
-    model4: String;
-    model5: String;
+  model2: String;
+  model3: String;
+  model4: String;
+  model5: String;
   public exampleData: Array<Select2OptionData>;
+
+  //editor
+  editordoc = jsonDoc;
+  editor: Editor;
+  toolbar: Toolbar = [
+    ["bold", "italic"],
+    ["underline", "strike"],
+    ["code", "blockquote"],
+    ["ordered_list", "bullet_list"],
+    [{ heading: ["h1", "h2", "h3", "h4", "h5", "h6"] }],
+    ["link", "image"],
+    ["text_color", "background_color"],
+    ["align_left", "align_center", "align_right", "align_justify"]
+  ];
+  form = new FormGroup({
+    editorContent: new FormControl(
+      { value: jsonDoc, disabled: false },
+      Validators.required()
+    )
+  });
+
+
+  get doc(): AbstractControl {
+    return this.form.get("editorContent");
+  }
   constructor(
     private ngbCalendar: NgbCalendar,
     private dateAdapter: NgbDateAdapter<string>) { }
 
-    get today() {
-      return this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
-    }
+  get today() {
+    return this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
+  }
 
-    name = 'slideToggle';
-    id = 'materialSlideToggle';
-    checked = false;
-    disabled = false;
-    label = 'Toggle On/Off';
-    labelledby = 'Some Other Text';
-    onChange(value: boolean) {
-    }
-    // name = 'slideToggle';
-    // id = 'materialSlideToggle';
-    // color: ThemePalette = 'accent';
-    // checked = false;
-    // disabled = false;
-    // label = 'Toggle On/Off';
-    // labelledby = 'Some Other Text';
-    // onChange(value: boolean) {
-    // }
+  name = 'slideToggle';
+  id = 'materialSlideToggle';
+  checked = false;
+  disabled = false;
+  label = 'Toggle On/Off';
+  labelledby = 'Some Other Text';
+  onChange(value: boolean) {
+  }
+
   ngOnInit(): void {
+    this.editor = new Editor();//editor
     this.exampleData = [
       {
         id: '001',
@@ -99,5 +120,8 @@ export class ProfileInfoInfomationsComponent implements OnInit {
         text: 'Khác'
       }
     ];
+  }
+  ngOnDestroy(): void {
+    this.editor.destroy();
   }
 }
