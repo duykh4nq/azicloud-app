@@ -12,7 +12,6 @@ import { EmplyeesFilterRoutingModule } from './human-resource/employees/employee
 import { DetailEntryRoutingModule } from './human-resource/employees/employees-detail/detail-entry/detail-entry-routing.module';
 import { EntryMainRoutingModule } from './human-resource/employees/employees-detail/detail-entry/entry-main/entry-main-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { NgxEditorModule } from 'ngx-editor';
@@ -32,7 +31,6 @@ import { NgxEditorModule } from 'ngx-editor';
     DetailEntryRoutingModule,
     EntryMainRoutingModule,
     NgbModule,
-    NgxMaterialTimepickerModule. setLocale ( ' ar-AE ' ),
     BrowserAnimationsModule,
     FullCalendarModule,
     NgxEditorModule

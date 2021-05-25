@@ -1,12 +1,13 @@
 @import "../../../../../../employees.component.css";
-.input-group .btn {
+.input-group-append .btn {
     border: 1px solid #dbdddf;
+    width: 45px;
     font-size: 0.9rem;
 }
 
 .form-inline .form-control {
     display: inline-block;
-    width: 382px;
+    width: calc(100% - 45px);
     vertical-align: middle;
 }
 
@@ -14,11 +15,19 @@
     display: flex;
     align-content: center;
     align-items: center;
-    height: 50px;
+    /* height: 50px; */
 }
 
 .example-margin {
     margin: 10px;
+}
+
+.select2-container {
+    width: 100%!important;
+}
+
+.select2-search--dropdown .select2-search__field {
+    width: 98%;
 }
 
 

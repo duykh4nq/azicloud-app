@@ -41,8 +41,11 @@ export class CustomDateParserFormatter extends NgbDateParserFormatter {
 })
 export class ProfileInfoContactComponent implements OnInit {
 
-  public exampleData: Array<Select2OptionData>;
-  public exampleData8: Array<Select2OptionData>;
+  public nationality: Array<Select2OptionData>;
+  public city: Array<Select2OptionData>;
+  public district: Array<Select2OptionData>;
+  public ward: Array<Select2OptionData>;
+  public relationship: Array<Select2OptionData>;
   closeModal: string;
   model1: String;
   model2: String;
@@ -75,40 +78,76 @@ export class ProfileInfoContactComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    this.exampleData = [
+    this.nationality = [
       {
-        id: 'United States',
-        text: 'Trưởng phòng kinh doanh'
+        id: '001',
+        text: 'Việt Nam'
       },
       {
-        id: 'United Kingdom',
-        text: 'Lập trình Mobile Apps'
+        id: '002',
+        text: 'Canada'
       },
       {
-        id: 'Afghanistan',
-        text: 'Nghỉ'
+        id: '003',
+        text: 'Khác'
       }
     ];
-    this.exampleData8 = [
+    this.district = [
       {
-        id: 'b008',
-        text: 'Cha/me'
+        id: '001',
+        text: 'Quận 1'
       },
       {
-        id: 'b009',
-        text: 'Anh/em'
+        id: '002',
+        text: 'Quận 2'
       },
       {
-        id: 'b0010',
-        text: 'Ong/ba'
+        id: '003',
+        text: 'Khác'
       },
-      {
-        id: 'b0010',
-        text: 'Co/Chu'
-      }
-
-
     ];
+    this.city = [
+      {
+        id: '001',
+        text: 'TP HCM'
+      },
+      {
+        id: '002',
+        text: 'Đà Nẵng'
+      },
+      {
+        id: '003',
+        text: 'Khác'
+      },
+    ];
+    this.ward = [
+      {
+        id: '001',
+        text: 'Phường 1'
+      },
+      {
+        id: '002',
+        text: 'Phường 2'
+      },
+      {
+        id: '003',
+        text: 'Khác'
+      },
+    ]
+    this.relationship = [
+      {
+        id: '001',
+        text: 'Vợ/Chồng'
+      },
+      {
+        id: '002',
+        text: 'Con trai/Con gái'
+      },
+      {
+        id: '003',
+        text: 'Khác'
+      },
+    ]
   }
 
 }

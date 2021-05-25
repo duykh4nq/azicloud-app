@@ -27,17 +27,14 @@
                     </div>
                     <div class="form-group">
                         <label class="font-normal">Quốc gia</label>
-                        <div class="input-group">
-                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                            </ng-select2>
-                        </div>
+                        <ng-select2 class="chosen-select" [data]="nationality" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
                     </div>
                     <div class="form-group">
                         <label class="font-normal">Quận/ Huyện</label>
-                        <div class="input-group">
-                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                            </ng-select2>
-                        </div>
+                        <ng-select2 class="chosen-select" [data]="district" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
+
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -49,17 +46,13 @@
                     </div>
                     <div class="form-group">
                         <label class="font-normal">Tỉnh/ Thành phố</label>
-                        <div class="input-group">
-                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                            </ng-select2>
-                        </div>
+                        <ng-select2 class="chosen-select" [data]="city" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
                     </div>
                     <div class="form-group">
                         <label class="font-normal">Phường/ Xã</label>
-                        <div class="input-group">
-                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                            </ng-select2>
-                        </div>
+                        <ng-select2 class="chosen-select" [data]="ward" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
                     </div>
                 </div>
             </div>
@@ -137,17 +130,13 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label class="font-normal">Quốc gia</label>
-                        <div class="input-group">
-                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                            </ng-select2>
-                        </div>
+                        <ng-select2 class="chosen-select" [data]="nationality" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
                     </div>
                     <div class="form-group">
                         <label class="font-normal">Quận/ Huyện</label>
-                        <div class="input-group">
-                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                            </ng-select2>
-                        </div>
+                        <ng-select2 class="chosen-select" [data]="district" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
                     </div>
                     <div class="form-group">
                         <label class="font-normal">Nguyên quán</label>
@@ -159,17 +148,13 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label class="font-normal">Tỉnh/ Thành phố</label>
-                        <div class="input-group">
-                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                            </ng-select2>
-                        </div>
+                        <ng-select2 class="chosen-select" [data]="city" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
                     </div>
                     <div class="form-group">
                         <label class="font-normal">Phường/ Xã</label>
-                        <div class="input-group">
-                            <ng-select2 class="chosen-select" [data]="exampleData" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                            </ng-select2>
-                        </div>
+                        <ng-select2 class="chosen-select" [data]="ward" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
                     </div>
                     <div class="form-group">
                         <label class="font-normal">Địa chỉ hiện tại</label>
@@ -252,24 +237,24 @@
                         </div>
                         <div class="form-group ">
                             <label class="font-normal ">Giới tính</label>
-                            <div class="input-group">
-                                <ng-select2 class="chosen-select" [data]="exampleData" [width]="205" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                                </ng-select2>
-                            </div>
+
+                            <ng-select2 class="chosen-select" [data]="sex" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+
                         </div>
                         <div class="form-group ">
                             <label class="font-normal ">Quốc tịch</label>
-                            <div class="input-group">
-                                <ng-select2 class="chosen-select" [data]="exampleData" [width]="205" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                                </ng-select2>
-                            </div>
+
+                            <ng-select2 class="chosen-select" [data]="nationality" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+
                         </div>
                         <div class="form-group ">
                             <label class="font-normal ">Quận/ Huyện</label>
-                            <div class="input-group">
-                                <ng-select2 class="chosen-select" [data]="exampleData" [width]="205" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                                </ng-select2>
-                            </div>
+
+                            <ng-select2 class="chosen-select" [data]="district" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+
                         </div>
                         <div class="form-group ">
                             <label class="font-normal ">Số CMND/Hộ chiếu</label>
@@ -280,14 +265,10 @@
                         <div class="form-group ">
                             <label class="font-normal ">Ngày bắt đầu</label>
                             <form class="form-inline">
-                                <div class="form-group date">
-                                    <div class="input-group">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline calendar" (click)="d1.toggle()" type="button"><i class="fa fa-calendar"></i></button>
-                                        </div>
-                                        <input class="form-control" style="width: 165px;" placeholder="dd/mm/yyyy" name="d1" #c1="ngModel" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker">
-                                    </div>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline calendar" (click)="d1.toggle()" type="button"><i class="fa fa-calendar"></i></button>
                                 </div>
+                                <input class="form-control" placeholder="dd/mm/yyyy" name="d1" #c1="ngModel" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker">
                             </form>
                         </div>
                     </div>
@@ -295,36 +276,32 @@
                         <div class="form-group ">
                             <label class="font-normal ">Ngày sinh</label>
                             <form class="form-inline">
-                                <div class="form-group date">
-                                    <div class="input-group">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline calendar" (click)="d2.toggle()" type="button"><i class="fa fa-calendar"></i></button>
-                                        </div>
-                                        <input class="form-control" style="width: 165px;" placeholder="dd/mm/yyyy" name="d2" #c1="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
-                                    </div>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline calendar" (click)="d2.toggle()" type="button"><i class="fa fa-calendar"></i></button>
                                 </div>
+                                <input class="form-control" placeholder="dd/mm/yyyy" name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
                             </form>
                         </div>
                         <div class="form-group ">
                             <label class="font-normal ">Mối quan hệ</label>
-                            <div class="input-group">
-                                <ng-select2 class="chosen-select" [data]="exampleData" [width]="205" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                                </ng-select2>
-                            </div>
+
+                            <ng-select2 class="chosen-select" [data]="relationship" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+
                         </div>
                         <div class="form-group ">
                             <label class="font-normal ">Tỉnh/ Thành phố</label>
-                            <div class="input-group">
-                                <ng-select2 class="chosen-select" [data]="exampleData" [width]="205" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                                </ng-select2>
-                            </div>
+
+                            <ng-select2 class="chosen-select" [data]="city" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+
                         </div>
                         <div class="form-group ">
                             <label class="font-normal ">Phường/ Xã</label>
-                            <div class="input-group">
-                                <ng-select2 class="chosen-select" [data]="exampleData" [width]="205" tabindex="2" [placeholder]="'chọn loại chức danh..'">
-                                </ng-select2>
-                            </div>
+
+                            <ng-select2 class="chosen-select" [data]="ward" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+
                         </div>
                         <div class="form-group ">
                             <label class="font-normal ">Mã số thuế cá nhân</label>
@@ -335,14 +312,10 @@
                         <div class="form-group ">
                             <label class="font-normal ">Ngày kết thúc</label>
                             <form class="form-inline">
-                                <div class="form-group date">
-                                    <div class="input-group">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline calendar" (click)="d3.toggle()" type="button"><i class="fa fa-calendar"></i></button>
-                                        </div>
-                                        <input class="form-control" style="width: 165px;" placeholder="dd/mm/yyyy" name="d3" #c3="ngModel" [(ngModel)]="model3" ngbDatepicker #d3="ngbDatepicker">
-                                    </div>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline calendar" (click)="d3.toggle()" type="button"><i class="fa fa-calendar"></i></button>
                                 </div>
+                                <input class="form-control" placeholder="dd/mm/yyyy" name="d3" #c3="ngModel" [(ngModel)]="model3" ngbDatepicker #d3="ngbDatepicker">
                             </form>
                         </div>
                     </div>

@@ -1,5 +1,21 @@
 @import "../../../../../employees-detail.component.css";
-.input-group .btn {
+.input-group-append .btn {
     border: 1px solid #dbdddf;
+    width: 45px;
     font-size: 0.9rem;
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: calc(100% - 45px);
+    vertical-align: middle;
+}
+
+h4 {
+    margin: auto;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
 }

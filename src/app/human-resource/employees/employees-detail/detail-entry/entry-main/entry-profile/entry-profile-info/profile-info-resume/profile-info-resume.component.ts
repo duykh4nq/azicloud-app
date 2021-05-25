@@ -7,6 +7,7 @@ import {
   NgbDateParserFormatter,
   NgbDateStruct
 } from '@ng-bootstrap/ng-bootstrap';
+// import { type } from 'os';
 @Injectable()
 export class CustomDateParserFormatter extends NgbDateParserFormatter {
   readonly DELIMITER = '/';
@@ -43,7 +44,11 @@ export class ProfileInfoResumeComponent implements OnInit {
 
   model1: String;
   model2: String;
-  public exampleData: Array<Select2OptionData>;
+  public group: Array<Select2OptionData>;
+  public form: Array<Select2OptionData>;
+  public skilltype:Array<Select2OptionData>;
+  public level: Array<Select2OptionData>;
+  public skill:Array<Select2OptionData>;
   closeModal: string;
   constructor(
     private modalService: NgbModal,
@@ -70,17 +75,73 @@ export class ProfileInfoResumeComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    this.exampleData = [
+    this.group = [
       {
-        id: 'United States',
-        text: 'Nam'
+        id: '001',
+        text: 'Group 1'
       },
       {
-        id: 'United Kingdom',
-        text: 'Nu'
+        id: '002',
+        text: 'Group 2'
       },
       {
-        id: 'Afghanistan',
+        id: '003',
+        text: 'Chua xac dinh'
+      }
+    ];
+    this.form = [
+      {
+        id: '001',
+        text: 'part-time'
+      },
+      {
+        id: '002',
+        text: 'full time'
+      },
+      {
+        id: '003',
+        text: 'Chua xac dinh'
+      }
+    ];
+    this.skilltype = [
+      {
+        id: '001',
+        text: 'Kỹ năng mềm'
+      },
+      {
+        id: '002',
+        text: 'Kỹ năng công việc'
+      },
+      {
+        id: '003',
+        text: 'Chua xac dinh'
+      }
+    ];
+    this.skill = [
+      {
+        id: '001',
+        text: 'Hát'
+      },
+      {
+        id: '002',
+        text: 'đá bóng'
+      },
+      {
+        id: '003',
+        text: 'Chua xac dinh'
+      }
+    ];
+    this.level = [
+      {
+        id: '001',
+        text: 'level 1'
+      },
+      {
+        id: '002',
+        text: 'level 2'
+      },
+      {
+        id: '003',
         text: 'Chua xac dinh'
       }
     ];

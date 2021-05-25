@@ -42,15 +42,15 @@ export class CustomDateParserFormatter extends NgbDateParserFormatter {
 export class ProfileInfoWorkComponent implements OnInit {
 
 
-  public exampleData: Array<Select2OptionData>;
-  public exampleData2: Array<Select2OptionData>;
-  public exampleData3: Array<Select2OptionData>;
-  public exampleData4: Array<Select2OptionData>;
-  public exampleData5: Array<Select2OptionData>;
-  public exampleData6: Array<Select2OptionData>;
-  public exampleData7: Array<Select2OptionData>;
-  public exampleData8: Array<Select2OptionData>;
-  public exampleData9: Array<Select2OptionData>;
+  public position: Array<Select2OptionData>;
+  public form: Array<Select2OptionData>;
+  public branch: Array<Select2OptionData>;
+  public manager: Array<Select2OptionData>;
+  public status: Array<Select2OptionData>;
+  public workgroup: Array<Select2OptionData>;
+  public company: Array<Select2OptionData>;
+  public department: Array<Select2OptionData>;
+  public shift: Array<Select2OptionData>;
   model1: String;
   model2: String;
   model3: String;
@@ -107,7 +107,7 @@ export class ProfileInfoWorkComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.exampleData = [
+    this.position = [
       {
 
 
@@ -123,7 +123,7 @@ export class ProfileInfoWorkComponent implements OnInit {
         text: 'Nghỉ'
       }
     ];
-    this.exampleData2 = [
+    this.form = [
       {
         id: 'United States',
         text: 'Toàn thời gian'
@@ -137,7 +137,7 @@ export class ProfileInfoWorkComponent implements OnInit {
         text: 'Thực tập'
       }
     ];
-    this.exampleData3 = [
+    this.branch = [
       {
         id: 'United States',
         text: 'Việt Nam'
@@ -151,7 +151,7 @@ export class ProfileInfoWorkComponent implements OnInit {
         text: 'Afghanistan'
       }
     ];
-    this.exampleData4 = [
+    this.manager = [
       {
         id: 'United States',
         text: 'Việt Nam'
@@ -165,7 +165,7 @@ export class ProfileInfoWorkComponent implements OnInit {
         text: 'Afghanistan'
       }
     ];
-    this.exampleData5 = [
+    this.status = [
       {
         id: 'United States',
         text: 'Thực tập'
@@ -179,7 +179,7 @@ export class ProfileInfoWorkComponent implements OnInit {
         text: 'Nghĩ'
       }
     ];
-    this.exampleData6 = [
+    this.workgroup = [
       {
         id: 'United States',
         text: 'Nhân viên'
@@ -193,7 +193,7 @@ export class ProfileInfoWorkComponent implements OnInit {
         text: 'Đào tạo'
       }
     ];
-    this.exampleData7 = [
+    this.company = [
       {
         id: 'United States',
         text: 'Nhân viên'
@@ -207,7 +207,7 @@ export class ProfileInfoWorkComponent implements OnInit {
         text: 'Đào tạo'
       }
     ];
-    this.exampleData8 = [
+    this.department = [
       {
         id: 'United States',
         text: 'Việt Nam'
@@ -221,7 +221,7 @@ export class ProfileInfoWorkComponent implements OnInit {
         text: 'Afghanistan'
       }
     ];
-    this.exampleData9 = [
+    this.shift = [
       {
         id: 'United States',
         text: 'Sang'

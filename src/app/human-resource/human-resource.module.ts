@@ -38,9 +38,7 @@ import { WorkFormatListComponent } from './employees/employees-detail/detail-ent
 import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { SlideToggleModule } from 'ngx-slide-toggle';
-import {TimepickerModule } from 'ngx-bootstrap/timepicker';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
@@ -97,9 +95,7 @@ FullCalendarModule.registerPlugins([
     NgbPaginationModule, NgbAlertModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxMaterialTimepickerModule,
     SlideToggleModule,
-    TimepickerModule.forRoot(),
     FullCalendarModule,
     NgxEditorModule
 

@@ -49,8 +49,9 @@ export class ProfileInfoInfomationsComponent implements OnInit, OnDestroy {
     model3: String;
     model4: String;
     model5: String;
-  public exampleData: Array<Select2OptionData>;
-
+  public marriage: Array<Select2OptionData>;
+  public nationality: Array<Select2OptionData>;
+  public sex: Array<Select2OptionData>;
   //editor
   editordoc = jsonDoc;
   editor: Editor;
@@ -60,6 +61,7 @@ export class ProfileInfoInfomationsComponent implements OnInit, OnDestroy {
     ["code", "blockquote"],
     ["ordered_list", "bullet_list"],
     [{ heading: ["h1", "h2", "h3", "h4", "h5", "h6"] }],
+    // [{ fontName: ["Time New Roman"] }],
     ["link", "image"],
     ["text_color", "background_color"],
     ["align_left", "align_center", "align_right", "align_justify"]
@@ -102,7 +104,7 @@ export class ProfileInfoInfomationsComponent implements OnInit, OnDestroy {
     // }
   ngOnInit(): void {
     this.editor = new Editor();//editor
-    this.exampleData = [
+    this.marriage = [
       {
         id: '001',
         text: 'Độc thân'
@@ -128,6 +130,35 @@ export class ProfileInfoInfomationsComponent implements OnInit, OnDestroy {
         text: 'Khác'
       }
     ];
+    this.nationality = [
+      {
+        id: '001',
+        text: 'Việt Nam'
+      },
+      {
+        id: '002',
+        text: 'Cannada'
+      },
+      {
+        id: '003',
+        text: 'Khác'
+      },
+
+    ];
+    this.sex = [
+      {
+        id: '001',
+        text: 'Nam'
+      },
+      {
+        id: '002',
+        text: 'Nữ'
+      },
+      {
+        id: '003',
+        text: 'Khác'
+      },
+    ]
   }
   ngOnDestroy(): void {
     this.editor.destroy();

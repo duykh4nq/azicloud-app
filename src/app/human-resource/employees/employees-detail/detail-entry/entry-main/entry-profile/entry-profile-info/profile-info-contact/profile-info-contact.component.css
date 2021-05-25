@@ -1,12 +1,37 @@
 @import "../../../../../employees-detail.component.css";
-.select2-container--default .select2-selection--single {
+
+/* .select2-container--default .select2-selection--single {
     background-color: #fff;
     border: 1px solid #aaa;
     border-radius: 1px;
     height: 36px;
+} */
+
+.input-group-append .btn {
+    border: 1px solid #dbdddf;
+    width: 45px;
+    font-size: 0.9rem;
 }
 
-.input-group .btn {
-    border: 1px solid #dbdddf;
-    font-size: 0.9rem;
+.form-inline .form-control {
+    display: inline-block;
+    width: calc(100% - 45px);
+    vertical-align: middle;
+}
+
+.select2-container {
+    width: 100%!important;
+}
+
+.select2-search--dropdown .select2-search__field {
+    width: 98%;
+}
+
+h4 {
+    margin: auto;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
 }

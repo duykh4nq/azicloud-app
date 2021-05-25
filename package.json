@@ -34,7 +34,6 @@
     "ng-select2": "^1.2.5",
     "ngx-bootstrap": "^6.2.0",
     "ngx-editor": "^9.0.2",
-    "ngx-material-timepicker": "^5.5.3",
     "ngx-slide-toggle": "^0.1.1",
     "rxjs": "~6.6.0",
     "select2": "^4.1.0-rc.0",
