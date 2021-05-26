@@ -67,8 +67,7 @@
             <label class="font-normal">Tình trạng hôn nhân</label>
             <ng-select2
               class="chosen-select"
-              [data]="exampleData"
-              [width]="420"
+              [data]="marriage"
               tabindex="2"
               placeholder="Chọn tình trạng.."
             >
@@ -112,8 +111,7 @@
             <label class="font-normal">Quốc tịch</label>
             <ng-select2
               class="chosen-select"
-              [data]="exampleData"
-              [width]="420"
+              [data]="nationality"
               tabindex="2"
               placeholder="Chọn tình trạng.."
             >
@@ -121,10 +119,10 @@
           </div>
           <div class="form-group">
             <label class="font-normal">Giới tinh</label>
+
             <ng-select2
               class="chosen-select"
-              [data]="exampleData"
-              [width]="420"
+              [data]="sex"
               tabindex="2"
               placeholder="Chọn tình trạng.."
             >
@@ -154,12 +152,11 @@
                   [aria-labelledby]="labelledby"
                   (change)="onChange($event)"
                 >
-                  Slide me!
                 </material-slide-toggle>
 
                 <!-- <mat-slide-toggle class="example-margin" [name]="name" [id]="id" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)" [color]="color" [checked]="checked" [disabled]="disabled">
-                                    Slide me!
-                                </mat-slide-toggle> -->
+                                  Slide me!
+                              </mat-slide-toggle> -->
               </section>
             </div>
           </div>
@@ -190,29 +187,24 @@
                 <div class="form-group">
                   <label class="font-normal">Ngày cấp CMND</label>
                   <form class="form-inline">
-                    <div class="form-group date">
-                      <div class="input-group">
-                        <div class="input-group-append">
-                          <button
-                            class="btn btn-outline calendar"
-                            (click)="d2.toggle()"
-                            type="button"
-                          >
-                            <i class="fa fa-calendar"></i>
-                          </button>
-                        </div>
-                        <input
-                          class="form-control"
-                          style="width: 220px"
-                          placeholder="dd/mm/yyyy"
-                          name="d2"
-                          #c2="ngModel"
-                          [(ngModel)]="model2"
-                          ngbDatepicker
-                          #d2="ngbDatepicker"
-                        />
-                      </div>
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline calendar"
+                        (click)="d2.toggle()"
+                        type="button"
+                      >
+                        <i class="fa fa-calendar"></i>
+                      </button>
                     </div>
+                    <input
+                      class="form-control"
+                      placeholder="dd/mm/yyyy"
+                      name="d2"
+                      #c2="ngModel"
+                      [(ngModel)]="model2"
+                      ngbDatepicker
+                      #d2="ngbDatepicker"
+                    />
                   </form>
                 </div>
               </div>
@@ -251,29 +243,24 @@
                 <div class="form-group">
                   <label class="font-normal">Ngày cấp hộ chiếu</label>
                   <form class="form-inline">
-                    <div class="form-group date">
-                      <div class="input-group">
-                        <div class="input-group-append">
-                          <button
-                            class="btn btn-outline calendar"
-                            (click)="d3.toggle()"
-                            type="button"
-                          >
-                            <i class="fa fa-calendar"></i>
-                          </button>
-                        </div>
-                        <input
-                          class="form-control"
-                          style="width: 150px"
-                          placeholder="dd/mm/yyyy"
-                          name="d3"
-                          #c3="ngModel"
-                          [(ngModel)]="model3"
-                          ngbDatepicker
-                          #d3="ngbDatepicker"
-                        />
-                      </div>
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline calendar"
+                        (click)="d3.toggle()"
+                        type="button"
+                      >
+                        <i class="fa fa-calendar"></i>
+                      </button>
                     </div>
+                    <input
+                      class="form-control"
+                      placeholder="dd/mm/yyyy"
+                      name="d3"
+                      #c3="ngModel"
+                      [(ngModel)]="model3"
+                      ngbDatepicker
+                      #d3="ngbDatepicker"
+                    />
                   </form>
                 </div>
               </div>
@@ -281,29 +268,24 @@
                 <div class="form-group">
                   <label class="font-normal">Ngày cấp hết hạn</label>
                   <form class="form-inline">
-                    <div class="form-group date">
-                      <div class="input-group">
-                        <div class="input-group-append">
-                          <button
-                            class="btn btn-outline calendar"
-                            (click)="d4.toggle()"
-                            type="button"
-                          >
-                            <i class="fa fa-calendar"></i>
-                          </button>
-                        </div>
-                        <input
-                          class="form-control"
-                          style="width: 150px"
-                          placeholder="dd/mm/yyyy"
-                          name="d4"
-                          #c4="ngModel"
-                          [(ngModel)]="model4"
-                          ngbDatepicker
-                          #d4="ngbDatepicker"
-                        />
-                      </div>
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline calendar"
+                        (click)="d4.toggle()"
+                        type="button"
+                      >
+                        <i class="fa fa-calendar"></i>
+                      </button>
                     </div>
+                    <input
+                      class="form-control"
+                      placeholder="dd/mm/yyyy"
+                      name="d4"
+                      #c4="ngModel"
+                      [(ngModel)]="model4"
+                      ngbDatepicker
+                      #d4="ngbDatepicker"
+                    />
                   </form>
                 </div>
               </div>
@@ -391,28 +373,24 @@
         <div class="form-group">
           <label class="font-normal">Ngày kiểm tra gần nhất</label>
           <form class="form-inline">
-            <div class="form-group date">
-              <div class="input-group">
-                <div class="input-group-append">
-                  <button
-                    class="btn btn-outline calendar"
-                    (click)="d5.toggle()"
-                    type="button"
-                  >
-                    <i class="fa fa-calendar"></i>
-                  </button>
-                </div>
-                <input
-                  class="form-control"
-                  placeholder="dd/mm/yyyy"
-                  name="d5"
-                  #c5="ngModel"
-                  [(ngModel)]="model5"
-                  ngbDatepicker
-                  #d5="ngbDatepicker"
-                />
-              </div>
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline calendar"
+                (click)="d5.toggle()"
+                type="button"
+              >
+                <i class="fa fa-calendar"></i>
+              </button>
             </div>
+            <input
+              class="form-control"
+              placeholder="dd/mm/yyyy"
+              name="d5"
+              #c5="ngModel"
+              [(ngModel)]="model5"
+              ngbDatepicker
+              #d5="ngbDatepicker"
+            />
           </form>
         </div>
       </div>
@@ -498,22 +476,22 @@
               </form>
 
               <!-- <div class="editor">
-                          <ngx-editor [editor]="editor" [(ngModel)]="editordoc">
-                          </ngx-editor>
-                        </div> -->
+                        <ngx-editor [editor]="editor" [(ngModel)]="editordoc">
+                        </ngx-editor>
+                      </div> -->
             </div>
             <!-- <div [ngxSummernote]="  "> </div> -->
             <!-- <h3>Lorem Ipsum is simply</h3>
-                        dummy text of the printing and typesetting industry.
-                        <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                        <br />
-                        <br />
-                        <ul>
-                            <li>Remaining essentially unchanged</li>
-                            <li>Make a type specimen book</li>
-                            <li>Unknown printer</li>
-                        </ul> -->
+                      dummy text of the printing and typesetting industry.
+                      <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                      but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                      <br />
+                      <br />
+                      <ul>
+                          <li>Remaining essentially unchanged</li>
+                          <li>Make a type specimen book</li>
+                          <li>Unknown printer</li>
+                      </ul> -->
           </div>
         </div>
       </div>

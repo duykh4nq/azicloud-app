@@ -1,4 +1,4 @@
-@import "../../../../../employees-detail.component.css";
+@import "../profile-info-infomations/profile-info-infomations.component.css";
 .select2-container--default .select2-selection--single {
     background-color: #fff;
     border: 1px solid #aaa;
@@ -6,7 +6,14 @@
     height: 36px;
 }
 
-.input-group .btn {
+.input-group-append .btn {
     border: 1px solid #dbdddf;
-    font-size: 0.9rem;
+    width: 45px;
+    font-size: 1rem;
+    border-radius: 0;
+}
+
+.form-inline .form-control {
+    height: 38px;
+    width: calc(100% - 45px);
 }

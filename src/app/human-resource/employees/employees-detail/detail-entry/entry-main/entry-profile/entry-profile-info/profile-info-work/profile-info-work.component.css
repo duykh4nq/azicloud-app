@@ -1,18 +1,22 @@
-@import "../../../../../../employees.component.css";
-@import '../../../../../../../../../assets/css/plugins/select2/select2.min.css';
-/* .ng-select2 {
-    word-wrap: normal;
-    width: 420px;
-    height: 35px;
-} */
-
-.input-group .form-control {
-    width: 382px;
+@import "../profile-info-infomations/profile-info-infomations.component.css";
+.select2-container {
+    width: 100%!important;
 }
 
-.input-group .btn {
+.select2-search--dropdown .select2-search__field {
+    width: 98%;
+}
+
+.input-group-append .btn {
     border: 1px solid #dbdddf;
-    font-size: 0.9rem;
+    width: 45px;
+    font-size: 1rem;
+    border-radius: 0;
+}
+
+.form-inline .form-control {
+    height: 38px;
+    width: calc(100% - 45px);
 }
 
 .example-section {
@@ -27,8 +31,8 @@
 }
 
 .modal-content {
-    margin-left: -50px;
-    width: 600px;
     display: flex;
     justify-content: center;
+    width: 700px;
+    border: none;
 }

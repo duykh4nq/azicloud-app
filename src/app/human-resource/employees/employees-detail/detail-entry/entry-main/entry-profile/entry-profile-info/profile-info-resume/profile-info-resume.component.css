@@ -1,5 +1,35 @@
-@import "../../../../../employees-detail.component.css";
-.input-group .btn {
+@import "../../../../../../employees.component.css";
+.input-group-append .btn {
     border: 1px solid #dbdddf;
-    font-size: 0.9rem;
+    width: 45px;
+    font-size: 1rem;
+    border-radius: 0;
+}
+
+.form-inline .form-control {
+    height: 38px;
+    width: calc(100% - 45px);
+}
+
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.example-margin {
+    margin: 10px;
+}
+
+.select2-container {
+    width: 100%!important;
+}
+
+.select2-search--dropdown .select2-search__field {
+    width: 98%;
+}
+
+ng-template {
+    width: 800px;
 }
