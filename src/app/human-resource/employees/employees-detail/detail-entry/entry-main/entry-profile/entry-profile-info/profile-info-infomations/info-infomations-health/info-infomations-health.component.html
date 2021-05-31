@@ -1,0 +1,55 @@
+<div class="ibox-title">
+    <h5>TÌNH TRẠNG SỨC KHỎE</h5>
+    <div class="ibox-tools">
+        <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
+    </div>
+</div>
+<div class="ibox-content">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="font-normal">Chiều cao</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Nhập chiều cao nhân viên" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Nhóm máu</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Nhập nhóm máu nhân viên" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Tình trạng sức khỏe</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Nhập nhóm máu nhân viên" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="font-normal">Cân nặng</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Nhập cân nặng nhân viên" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Bệnh bẩm sinh, mãn tính (nếu có)</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Nhập bệnh bẩm sinh, mãn tính nhân viên" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Ngày kiểm tra gần nhất</label>
+                <form class="form-inline">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline calendar" (click)="d5.toggle()" type="button">
+            <i class="fa fa-calendar"></i>
+          </button>
+                    </div>
+                    <input class="form-control" placeholder="dd/mm/yyyy" name="d5" #c5="ngModel" [(ngModel)]="model5" ngbDatepicker #d5="ngbDatepicker" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

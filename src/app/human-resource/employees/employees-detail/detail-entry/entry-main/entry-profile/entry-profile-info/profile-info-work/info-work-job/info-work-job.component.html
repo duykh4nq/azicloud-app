@@ -1,0 +1,117 @@
+<div class="ibox-title">
+    <h5>THÔNG TIN VIỆC LÀM</h5>
+    <div class="ibox-tools">
+        <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
+    </div>
+</div>
+<div class="ibox-content">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="font-normal">Mã nhân viên</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Nhập mã nhân viên" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Chức danh</label>
+                <ng-select2 class="chosen-select" [data]="position" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                </ng-select2>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Loại việc làm</label>
+                <ng-select2 class="chosen-select" [data]="form" [width]="420" tabindex="2" placeholder="Chọn loại việc làm..">
+                </ng-select2>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Chi nhánh</label>
+                <ng-select2 class="chosen-select" [data]="branch" [width]="420" tabindex="2" placeholder="Chọn chi nhánh..">
+                </ng-select2>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Người quản lý trực tiếp</label>
+                <ng-select2 class="chosen-select" [data]="manager" [width]="420" tabindex="2" placeholder="Chọn người quản lý trực tiếp..">
+                </ng-select2>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Ngày bắt đầu thử việc</label>
+                <form class="form-inline">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline calendar" (click)="d1.toggle()" type="button">
+        <i class="fa fa-calendar"></i>
+      </button>
+                    </div>
+                    <input class="form-control" placeholder="dd/mm/yyyy" name="d1" #c1="ngModel" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker" />
+                </form>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Ngày bắt đầu hợp đồng</label>
+                <form class="form-inline">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline calendar" (click)="d2.toggle()" type="button">
+        <i class="fa fa-calendar"></i>
+      </button>
+                    </div>
+                    <input class="form-control" placeholder="dd/mm/yyyy" name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker" />
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="font-normal">Tình trạng</label>
+
+                <ng-select2 class="chosen-select" [data]="status" [width]="420" tabindex="2" placeholder="Chọn tình trạng..">
+                </ng-select2>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Nhóm công việc</label>
+                <ng-select2 class="chosen-select" [data]="workgroup" [width]="420" tabindex="2" placeholder="Chọn nhóm công việc..">
+                </ng-select2>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Công ty</label>
+                <ng-select2 class="chosen-select" [data]="company" [width]="420" tabindex="2" placeholder="Chọn công ty..">
+                </ng-select2>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Phòng ban</label>
+                <ng-select2 class="chosen-select" [data]="department" [width]="420" tabindex="2" placeholder="Chọn phòng ban..">
+                </ng-select2>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Ngày tham gia</label>
+                <form class="form-inline">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline calendar" (click)="d3.toggle()" type="button">
+        <i class="fa fa-calendar"></i>
+      </button>
+                    </div>
+                    <input class="form-control" placeholder="dd/mm/yyyy" name="d3" #c3="ngModel" [(ngModel)]="model3" ngbDatepicker #d3="ngbDatepicker" />
+                </form>
+            </div>
+            <div class="form-group">
+                <label class="font-normal">Ngày kết thúc thử việc</label>
+                <form class="form-inline">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline calendar" (click)="d4.toggle()" type="button">
+        <i class="fa fa-calendar"></i>
+      </button>
+                    </div>
+                    <input class="form-control" placeholder="dd/mm/yyyy" name="d4" #c4="ngModel" [(ngModel)]="model4" ngbDatepicker #d4="ngbDatepicker" />
+                </form>
+            </div>
+
+            <div class="form-group">
+                <label class="font-normal">Ngày kết thúc hợp đồng</label>
+                <form class="form-inline">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline calendar" (click)="d5.toggle()" type="button">
+        <i class="fa fa-calendar"></i>
+      </button>
+                    </div>
+                    <input class="form-control" placeholder="dd/mm/yyyy" name="d5" #c5="ngModel" [(ngModel)]="model5" ngbDatepicker #d5="ngbDatepicker" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,137 @@
+<div class="ibox-title">
+    <h5>TÀI SẢN</h5>
+    <div class="ibox-tools">
+        <a (click)="triggerModal(job)" data-toggle="modal" data-target="#popup-job" data-backdrop="static" data-keyboard="false" class="btn btn-primary btn-xs">Thêm mới</a>
+    </div>
+</div>
+<div class="ibox-content">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="">
+                <tr>
+                    <th>Chức vụ</th>
+                    <th>Phòng ban</th>
+                    <th>Tình trạng</th>
+                    <th>Thời gian</th>
+                    <th class="text-right"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>FrontEnd</td>
+                    <td>AziWorld Vietnam</td>
+                    <td><span class="label">Plain</span></td>
+                    <td>20/01/2018 - 20/05/2020</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rooney Lindsay</td>
+                    <td>Proin Limited</td>
+                    <td><span class="label label-primary">Primary</span></td>
+                    <td>rooney@proin.com</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lionel Mcmillan</td>
+                    <td>Et Industries</td>
+                    <td><span class="label label-info">Information</span></td>
+                    <td>+432 955 908</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<ng-template #job let-c="close" let-d="dismiss">
+    <div tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">THÔNG TIN VIỆC LÀM</h4>
+            </div>
+            <div class="modal-body white-bg">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Chức danh</label>
+                            <ng-select2 class="chosen-select" [data]="position" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Loại việc làm</label>
+                            <ng-select2 class="chosen-select" [data]="form" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Công ty</label>
+                            <ng-select2 class="chosen-select" [data]="company" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Phòng ban</label>
+                            <ng-select2 class="chosen-select" [data]="department" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Ngày bắt đầu</label>
+                            <form class="form-inline">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline calendar" (click)="d7.toggle()" type="button">
+                <i class="fa fa-calendar"></i>
+              </button>
+                                </div>
+                                <input class="form-control" placeholder="dd/mm/yyyy" name="d7" #c7="ngModel" [(ngModel)]="model7" ngbDatepicker #d7="ngbDatepicker" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Tình trạng</label>
+                            <ng-select2 class="chosen-select" [data]="status" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Nhóm công việc</label>
+                            <ng-select2 class="chosen-select" [data]="workgroup" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Chi nhánh</label>
+                            <ng-select2 class="chosen-select" [data]="branch" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Người quản lý trực tiếp</label>
+                            <ng-select2 class="chosen-select" [data]="manager" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Ngày kết thúc</label>
+                            <form class="form-inline">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline calendar" (click)="d8.toggle()" type="button">
+                <i class="fa fa-calendar"></i>
+              </button>
+                                </div>
+                                <input class="form-control" placeholder="dd/mm/yyyy" name="d8" #c8="ngModel" [(ngModel)]="model8" ngbDatepicker #d8="ngbDatepicker" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">
+      Hủy
+    </button>
+                <button type="button" class="btn btn-primary min-w-100">
+      Lưu thay đổi
+    </button>
+            </div>
+        </div>
+    </div>
+</ng-template>
