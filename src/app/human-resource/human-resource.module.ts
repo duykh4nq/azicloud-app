@@ -46,6 +46,10 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { DatepickerModule, TimePickerModule } from 'ng-uikit-pro-standard';
 import { NgxEditorModule } from 'ngx-editor';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -102,10 +106,12 @@ FullCalendarModule.registerPlugins([
     FullCalendarModule,
     DatepickerModule,
     TimePickerModule,
-
+    MatButtonModule,
     FullCalendarModule,
-    NgxEditorModule
-
+    NgxEditorModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatTableModule
   ]
 })
 export class HumanResourceModule { }

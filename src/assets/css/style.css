@@ -5262,17 +5262,13 @@ video {
 /* MODAL */
 
 .modal-content {
-    background-clip: padding-box;
-    background-color: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
     outline: 0 none;
-    position: relative;
-}
-
-.modal-dialog {
-    z-index: 2200;
+    border: 0;
+    background: transparent;
+    width: 700px;
+    margin-left: -50px;
 }
 
 .modal-body {
@@ -5284,9 +5280,11 @@ video {
 }
 
 .modal-header {
+    font-size: 25px;
     padding: 30px 15px;
     text-align: center;
     display: block;
+    background: #FFFFFF;
 }
 
 .animated.modal.fade .modal-dialog {
@@ -11435,6 +11433,7 @@ body.md-skin {
     justify-content: center;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: normal;
+    background: #FFFFFF;
 }
 
 .inmodal.window-center .select2-container {

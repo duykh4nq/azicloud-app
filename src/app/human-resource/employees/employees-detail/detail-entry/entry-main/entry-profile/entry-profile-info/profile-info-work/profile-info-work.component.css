@@ -31,8 +31,5 @@
 }
 
 .modal-content {
-    display: flex;
-    justify-content: center;
     width: 700px;
-    border: none;
 }

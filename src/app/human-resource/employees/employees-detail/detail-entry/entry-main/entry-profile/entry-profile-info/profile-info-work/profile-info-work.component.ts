@@ -125,8 +125,6 @@ export class ProfileInfoWorkComponent implements OnInit {
   ngOnInit(): void {
     this.position = [
       {
-
-
         id: 'United States',
         text: 'Trưởng phòng kinh doanh'
       },

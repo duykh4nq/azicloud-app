@@ -26,16 +26,13 @@
     padding: 3px 20px;
 }
 
-.dropdown-menu>button:focus,
-.dropdown-menu>button:hover {
+.dropdown-menu>button:focus, .dropdown-menu>button:hover {
     color: #262626;
     text-decoration: none;
     background-color: #f5f5f5;
 }
 
-.dropdown-menu>.active>button,
-.dropdown-menu>.active>button:focus,
-.dropdown-menu>.active>button:hover {
+.dropdown-menu>.active>button, .dropdown-menu>.active>button:focus, .dropdown-menu>.active>button:hover {
     color: #fff;
     text-decoration: none;
     background-color: #34499d;
@@ -44,4 +41,70 @@
 
 .dropdown-menu>button.font-bold {
     font-weight: 600;
+}
+
+.attendances-navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.attendances-navbar button, form, ng-select2 {
+    padding-left: 5px;
+}
+
+.form-inline button i {
+    padding: 4px;
+    text-align: center;
+    justify-content: center;
+}
+
+.form-control {
+    border-right: 0;
+}
+
+.btn {
+    text-align: center;
+    border-radius: 0;
+}
+
+.calendar {
+    text-align: center;
+    justify-content: center;
+    height: 36px;
+    border-left: 0;
+}
+
+.calendar:hover {
+    border-left: 0;
+}
+
+table {
+    width: 100%;
+}
+
+table, tr, th, td {
+    border: 1px solid rgb(218, 218, 218);
+    border-collapse: collapse;
+}
+
+table tr td button {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.item-th {
+    align-items: center;
+    text-align: center;
+}
+
+table i {
+    padding: 5px;
+}
+
+table input {
+    outline: none;
+    border: 0;
+    height: 30px;
+    width: 90%;
 }

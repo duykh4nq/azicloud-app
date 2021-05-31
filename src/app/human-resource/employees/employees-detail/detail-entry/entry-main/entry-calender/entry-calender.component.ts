@@ -17,7 +17,6 @@ export class EntryCalenderComponent {
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth,dayGridWeek,dayGridDay',
-
     },
     initialView: 'dayGridMonth',
     initialEvents: INITIAL_EVENTS,
@@ -68,9 +67,6 @@ export class EntryCalenderComponent {
   handleEvents(events: EventApi[]) {
     this.currentEvents = events;
   }
-
-
-
 
 
 }
