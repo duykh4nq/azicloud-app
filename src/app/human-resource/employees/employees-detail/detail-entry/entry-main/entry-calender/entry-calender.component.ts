@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/angular';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
 
@@ -6,7 +6,6 @@ import { INITIAL_EVENTS, createEventId } from './event-utils';
   selector: 'app-entry-calender',
   templateUrl: './entry-calender.component.html',
   styleUrls: ['./entry-calender.component.css'],
-  encapsulation: ViewEncapsulation.None
 })
 export class EntryCalenderComponent {
   constructor() { }

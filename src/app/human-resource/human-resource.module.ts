@@ -46,17 +46,26 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { DatepickerModule, TimePickerModule } from 'ng-uikit-pro-standard';
 import { NgxEditorModule } from 'ngx-editor';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatTableModule, MatTableDataSource } from '@angular/material/table';
+import { InfoContactAccommodationComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-contact/info-contact-accommodation/info-contact-accommodation.component';
+import { InfoContactEmergencyComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-contact/info-contact-emergency/info-contact-emergency.component';
+import { InfoContactAddressComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-contact/info-contact-address/info-contact-address.component';
+import { InfoContactRelativesComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-contact/info-contact-relatives/info-contact-relatives.component';
+import { InfoResumeExperienceComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-resume/info-resume-experience/info-resume-experience.component';
+import { InfoResumeSkillComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-resume/info-resume-skill/info-resume-skill.component';
+import { InfoWorkJobComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-work/info-work-job/info-work-job.component';
+import { InfoWorkCalendarComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-work/info-work-calendar/info-work-calendar.component';
+import { InfoWorkHistoryComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-work/info-work-history/info-work-history.component';
+import { InfoWorkContractComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-work/info-work-contract/info-work-contract.component';
+import { InfoWorkAssetComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-work/info-work-asset/info-work-asset.component';
+import { InfoInfomationsBasicComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-infomations/info-infomations-basic/info-infomations-basic.component';
+import { InfoInfomationsHealthComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-infomations/info-infomations-health/info-infomations-health.component';
+import { InfoInfomationsBankComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-infomations/info-infomations-bank/info-infomations-bank.component';
+import { InfoInfomationsIntroduceComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-infomations/info-infomations-introduce/info-infomations-introduce.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
   interactionPlugin
 ]);
-
-
 @NgModule({
   declarations: [
     EmployeesComponent,
@@ -92,6 +101,21 @@ FullCalendarModule.registerPlugins([
     WorkFormatKanbanComponent,
     WorkFormatMemberComponent,
     WorkFormatListComponent,
+    InfoContactAccommodationComponent,
+    InfoContactEmergencyComponent,
+    InfoContactAddressComponent,
+    InfoContactRelativesComponent,
+    InfoResumeExperienceComponent,
+    InfoResumeSkillComponent,
+    InfoWorkJobComponent,
+    InfoWorkCalendarComponent,
+    InfoWorkHistoryComponent,
+    InfoWorkContractComponent,
+    InfoWorkAssetComponent,
+    InfoInfomationsBasicComponent,
+    InfoInfomationsHealthComponent,
+    InfoInfomationsBankComponent,
+    InfoInfomationsIntroduceComponent,
   ],
   imports: [
     CommonModule,
@@ -106,12 +130,10 @@ FullCalendarModule.registerPlugins([
     FullCalendarModule,
     DatepickerModule,
     TimePickerModule,
-    MatButtonModule,
+
     FullCalendarModule,
-    NgxEditorModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatTableModule
+    NgxEditorModule
+
   ]
 })
 export class HumanResourceModule { }

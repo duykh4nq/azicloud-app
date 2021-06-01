@@ -41,3 +41,8 @@ b {
 .fc-icon-chevron-left .fc-icon-chevron-right {
     margin-bottom: 5px;
 }
+
+li {
+    margin: 0 !important;
+    padding: 0;
+}
