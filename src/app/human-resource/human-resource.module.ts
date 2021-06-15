@@ -46,13 +46,32 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { DatepickerModule, TimePickerModule } from 'ng-uikit-pro-standard';
 import { NgxEditorModule } from 'ngx-editor';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
+import { ContactAccomComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-contact/contact-accom/contact-accom.component';
+import { ContactAddressComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-contact/contact-address/contact-address.component';
+import { ContactEmergencyComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-contact/contact-emergency/contact-emergency.component';
+import { ContactRelativesComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-contact/contact-relatives/contact-relatives.component';
+import { InfomationsBankComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-infomations/infomations-bank/infomations-bank.component';
+import { InfomationsBasicComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-infomations/infomations-basic/infomations-basic.component';
+import { InfomationsHealthComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-infomations/infomations-health/infomations-health.component';
+import { InfomationsIntroComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-infomations/infomations-intro/infomations-intro.component';
+import { ResumeExpComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-resume/resume-exp/resume-exp.component';
+import { ResumeSkillComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-resume/resume-skill/resume-skill.component';
+import { WorkAssetComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-work/work-asset/work-asset.component';
+import { WorkJobComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-work/work-job/work-job.component';
+import { WorkHistoryComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-work/work-history/work-history.component';
+import { WorkContractComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-work/work-contract/work-contract.component';
+import { WorkCalenderComponent } from './employees/employees-detail/detail-entry/entry-main/entry-profile/entry-profile-info/profile-info-work/work-calender/work-calender.component';
+import { AttenNavbarComponent } from './employees/employees-detail/detail-entry/entry-main/entry-attendances/atten-navbar/atten-navbar.component';
+import { WeeklyTimekeepingComponent } from './employees/employees-detail/detail-entry/entry-main/entry-attendances/weekly-timekeeping/weekly-timekeeping.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
   interactionPlugin
 ]);
-
-
 @NgModule({
   declarations: [
     EmployeesComponent,
@@ -88,6 +107,23 @@ FullCalendarModule.registerPlugins([
     WorkFormatKanbanComponent,
     WorkFormatMemberComponent,
     WorkFormatListComponent,
+    ContactAccomComponent,
+    ContactAddressComponent,
+    ContactEmergencyComponent,
+    ContactRelativesComponent,
+    InfomationsBankComponent,
+    InfomationsBasicComponent,
+    InfomationsHealthComponent,
+    InfomationsIntroComponent,
+    ResumeExpComponent,
+    ResumeSkillComponent,
+    WorkAssetComponent,
+    WorkJobComponent,
+    WorkHistoryComponent,
+    WorkContractComponent,
+    WorkCalenderComponent,
+    AttenNavbarComponent,
+    WeeklyTimekeepingComponent,
   ],
   imports: [
     CommonModule,
@@ -102,7 +138,6 @@ FullCalendarModule.registerPlugins([
     FullCalendarModule,
     DatepickerModule,
     TimePickerModule,
-
     FullCalendarModule,
     NgxEditorModule
 

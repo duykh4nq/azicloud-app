@@ -1,267 +1,179 @@
 <div class="row animated fadeInUp">
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>CHỖ Ở HIỆN NAY</h5>
-      <div class="ibox-tools">
-        <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
-      </div>
+    <div class="ibox col-lg-12">
+        <app-contact-accom></app-contact-accom>
+        <!-- <div class="ibox-title">
+            <h5>CHỖ Ở HIỆN NAY</h5>
+            <div class="ibox-tools">
+                <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="font-normal">Địa chỉ</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập mã nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Số cố định</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập số điện thoại bàn nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Quốc gia</label>
+                        <ng-select2 class="chosen-select" [data]="nationality" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Quận/ Huyện</label>
+                        <ng-select2 class="chosen-select" [data]="district" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Số di động</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập số điện thoại di động nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Tỉnh/ Thành phố</label>
+                        <ng-select2 class="chosen-select" [data]="city" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Phường/ Xã</label>
+                        <ng-select2 class="chosen-select" [data]="ward" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
-    <div class="ibox-content">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="form-group">
-            <label class="font-normal">Địa chỉ</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập mã nhân viên"
-                class="form-control"
-              />
+    <div class="ibox col-lg-12">
+        <app-contact-emergency></app-contact-emergency>
+        <!-- <div class="ibox-title">
+            <h5>LIÊN HỆ KHẨN CẤP</h5>
+            <div class="ibox-tools">
+                <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Số cố định</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập số điện thoại bàn nhân viên"
-                class="form-control"
-              />
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="font-normal">Địa chỉ</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập mã nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Quốc gia</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="nationality"
-              tabindex="2"
-              [placeholder]="'chọn loại chức danh..'"
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Quận/ Huyện</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="district"
-              tabindex="2"
-              [placeholder]="'chọn loại chức danh..'"
-            >
-            </ng-select2>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Số di động</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập số điện thoại di động nhân viên"
-                class="form-control"
-              />
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Người liên hệ</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập họ và tên nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Số di động khẩn cấp</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập họ và tên nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Quan hệ với nhân viên</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập quan hệ với nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Số cố định khẩn cấp</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập họ và tên nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Tỉnh/ Thành phố</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="city"
-              tabindex="2"
-              [placeholder]="'chọn loại chức danh..'"
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Phường/ Xã</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="ward"
-              tabindex="2"
-              [placeholder]="'chọn loại chức danh..'"
-            >
-            </ng-select2>
-          </div>
-        </div>
-      </div>
+        </div> -->
     </div>
-  </div>
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>LIÊN HỆ KHẨN CẤP</h5>
-      <div class="ibox-tools">
-        <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
-      </div>
+    <div class="ibox col-lg-12">
+        <app-contact-address></app-contact-address>
+        <!-- <div class="ibox-title">
+            <h5>ĐỊA CHỈ THƯỜNG TRÚ</h5>
+            <div class="ibox-tools">
+                <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="font-normal">Địa chỉ</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập mã nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Quốc gia</label>
+                        <ng-select2 class="chosen-select" [data]="nationality" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Quận/ Huyện</label>
+                        <ng-select2 class="chosen-select" [data]="district" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Nguyên quán</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập nguyên quán nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Tỉnh/ Thành phố</label>
+                        <ng-select2 class="chosen-select" [data]="city" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Phường/ Xã</label>
+                        <ng-select2 class="chosen-select" [data]="ward" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Địa chỉ hiện tại</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập địa chỉ hiện tại nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
-    <div class="ibox-content">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="form-group">
-            <label class="font-normal">Địa chỉ</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập mã nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Người liên hệ</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập họ và tên nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Số di động khẩn cấp</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập họ và tên nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Quan hệ với nhân viên</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập quan hệ với nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Số cố định khẩn cấp</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập họ và tên nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>ĐỊA CHỈ THƯỜNG TRÚ</h5>
-      <div class="ibox-tools">
-        <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
-      </div>
-    </div>
-    <div class="ibox-content">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="form-group">
-            <label class="font-normal">Địa chỉ</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập mã nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Quốc gia</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="nationality"
-              tabindex="2"
-              [placeholder]="'chọn loại chức danh..'"
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Quận/ Huyện</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="district"
-              tabindex="2"
-              [placeholder]="'chọn loại chức danh..'"
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Nguyên quán</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập nguyên quán nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Tỉnh/ Thành phố</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="city"
-              tabindex="2"
-              [placeholder]="'chọn loại chức danh..'"
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Phường/ Xã</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="ward"
-              [width]="420"
-              tabindex="2"
-              [placeholder]="'chọn loại chức danh..'"
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Địa chỉ hiện tại</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập địa chỉ hiện tại nhân viên"
-                class="form-control"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>NGƯỜI PHỤ THUỘC</h5>
-      <div class="ibox-tools">
-        <a
-          data-toggle="modal"
-          data-target="#myModal6"
-          data-backdrop="static"
-          data-keyboard="false"
-          class="btn btn-primary btn-xs"
-          (click)="triggerModal(content)"
-          >Thêm mới</a
+    <div class="ibox col-lg-12">
+        <app-contact-relatives></app-contact-relatives>
+        <!-- <div class="ibox-title">
+            <h5>NGƯỜI PHỤ THUỘC</h5>
+            <div class="ibox-tools">
+                <a data-toggle="modal" data-target="#myModal6" data-backdrop="static" data-keyboard="false" class="btn btn-primary btn-xs" (click)="triggerModal(content)">Thêm mới</a
         >
       </div>
     </div>
@@ -285,229 +197,140 @@
               <td>gravida@rbisit.com</td>
               <td class="client-status text-right">
                 <a href=" " class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Rooney Lindsay</td>
-              <td>Proin Limited</td>
-              <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-              <td>rooney@proin.com</td>
-              <td class="client-status text-right">
-                <a href=" " class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Lionel Mcmillan</td>
-              <td>Et Industries</td>
-              <td class="contact-type"><i class="fa fa-phone"> </i></td>
-              <td>+432 955 908</td>
-              <td class="client-status text-right">
-                <a href=" " class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                </td>
+                </tr>
+                <tr>
+                    <td>Rooney Lindsay</td>
+                    <td>Proin Limited</td>
+                    <td class="contact-type"><i class="fa fa-envelope"> </i></td>
+                    <td>rooney@proin.com</td>
+                    <td class="client-status text-right">
+                        <a href=" " class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lionel Mcmillan</td>
+                    <td>Et Industries</td>
+                    <td class="contact-type"><i class="fa fa-phone"> </i></td>
+                    <td>+432 955 908</td>
+                    <td class="client-status text-right">
+                        <a href=" " class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+        </div> -->
     </div>
-  </div>
 </div>
-<ng-template #content let-c="close " let-d="dismiss ">
-  <div
-    id="popup-employee-create "
-    tabindex="-1 "
-    role="dialog "
-    aria-hidden="true "
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">THÔNG TIN NGƯỜI PHỤ THUỘC</h4>
-      </div>
-      <div class="modal-body white-bg">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label class="font-normal">Họ và tên</label>
-              <div class="input-group">
-                <input
-                  type="text "
-                  placeholder="Nhập họ và tên người thân "
-                  class="form-control"
-                />
-              </div>
+<!-- <ng-template #content let-c="close " let-d="dismiss ">
+    <div id="popup-employee-create " tabindex="-1 " role="dialog " aria-hidden="true ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">THÔNG TIN NGƯỜI PHỤ THUỘC</h4>
             </div>
-            <div class="form-group">
-              <label class="font-normal">Giới tính</label>
+            <div class="modal-body white-bg">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Họ và tên</label>
+                            <div class="input-group">
+                                <input type="text " placeholder="Nhập họ và tên người thân " class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Giới tính</label>
+                            <ng-select2 class="chosen-select" [data]="sex" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Quốc tịch</label>
 
-              <ng-select2
-                class="chosen-select"
-                [data]="sex"
-                tabindex="2"
-                [placeholder]="'chọn loại chức danh..'"
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Quốc tịch</label>
+                            <ng-select2 class="chosen-select" [data]="nationality" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Quận/ Huyện</label>
 
-              <ng-select2
-                class="chosen-select"
-                [data]="nationality"
-                tabindex="2"
-                [placeholder]="'chọn loại chức danh..'"
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Quận/ Huyện</label>
-
-              <ng-select2
-                class="chosen-select"
-                [data]="district"
-                tabindex="2"
-                [placeholder]="'chọn loại chức danh..'"
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Số CMND/Hộ chiếu</label>
-              <div class="input-group">
-                <input
-                  type="text "
-                  placeholder="Nhập số cmnd/hộ chiếu người thân "
-                  class="form-control"
-                />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Ngày bắt đầu</label>
-              <form class="form-inline">
-                <div class="input-group-append">
-                  <button
-                    class="btn btn-outline calendar"
-                    (click)="d1.toggle()"
-                    type="button"
-                  >
+                            <ng-select2 class="chosen-select" [data]="district" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Số CMND/Hộ chiếu</label>
+                            <div class="input-group">
+                                <input type="text " placeholder="Nhập số cmnd/hộ chiếu người thân " class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Ngày bắt đầu</label>
+                            <form class="form-inline">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline calendar" (click)="d1.toggle()" type="button">
                     <i class="fa fa-calendar"></i>
                   </button>
-                </div>
-                <input
-                  class="form-control"
-                  placeholder="dd/mm/yyyy"
-                  name="d1"
-                  #c1="ngModel"
-                  [(ngModel)]="model1"
-                  ngbDatepicker
-                  #d1="ngbDatepicker"
-                />
-              </form>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label class="font-normal">Ngày sinh</label>
-              <form class="form-inline">
-                <div class="input-group-append">
-                  <button
-                    class="btn btn-outline calendar"
-                    (click)="d2.toggle()"
-                    type="button"
-                  >
+                                </div>
+                                <input class="form-control" placeholder="dd/mm/yyyy" name="d1" #c1="ngModel" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Ngày sinh</label>
+                            <form class="form-inline">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline calendar" (click)="d2.toggle()" type="button">
                     <i class="fa fa-calendar"></i>
                   </button>
-                </div>
-                <input
-                  class="form-control"
-                  placeholder="dd/mm/yyyy"
-                  name="d2"
-                  #c2="ngModel"
-                  [(ngModel)]="model2"
-                  ngbDatepicker
-                  #d2="ngbDatepicker"
-                />
-              </form>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Mối quan hệ</label>
+                                </div>
+                                <input class="form-control" placeholder="dd/mm/yyyy" name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker" />
+                            </form>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Mối quan hệ</label>
 
-              <ng-select2
-                class="chosen-select"
-                [data]="relationship"
-                tabindex="2"
-                [placeholder]="'chọn loại chức danh..'"
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Tỉnh/ Thành phố</label>
+                            <ng-select2 class="chosen-select" [data]="relationship" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Tỉnh/ Thành phố</label>
 
-              <ng-select2
-                class="chosen-select"
-                [data]="city"
-                tabindex="2"
-                [placeholder]="'chọn loại chức danh..'"
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Phường/ Xã</label>
+                            <ng-select2 class="chosen-select" [data]="city" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Phường/ Xã</label>
 
-              <ng-select2
-                class="chosen-select"
-                [data]="ward"
-                tabindex="2"
-                [placeholder]="'chọn loại chức danh..'"
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Mã số thuế cá nhân</label>
-              <div class="input-group">
-                <input
-                  type="text "
-                  placeholder="Nhập mã số thuế cá nhân người thân "
-                  class="form-control"
-                />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Ngày kết thúc</label>
-              <form class="form-inline">
-                <div class="input-group-append">
-                  <button
-                    class="btn btn-outline calendar"
-                    (click)="d3.toggle()"
-                    type="button"
-                  >
+                            <ng-select2 class="chosen-select" [data]="ward" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                            </ng-select2>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Mã số thuế cá nhân</label>
+                            <div class="input-group">
+                                <input type="text " placeholder="Nhập mã số thuế cá nhân người thân " class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Ngày kết thúc</label>
+                            <form class="form-inline">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline calendar" (click)="d3.toggle()" type="button">
                     <i class="fa fa-calendar"></i>
                   </button>
+                                </div>
+                                <input class="form-control" placeholder="dd/mm/yyyy" name="d3" #c3="ngModel" [(ngModel)]="model3" ngbDatepicker #d3="ngbDatepicker" />
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <input
-                  class="form-control"
-                  placeholder="dd/mm/yyyy"
-                  name="d3"
-                  #c3="ngModel"
-                  [(ngModel)]="model3"
-                  ngbDatepicker
-                  #d3="ngbDatepicker"
-                />
-              </form>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button "
-          class="btn btn-white min-w-100"
-          data-dismiss="modal "
-          (click)="d('Cross click')"
-        >
+            <div class="modal-footer">
+                <button type="button " class="btn btn-white min-w-100" data-dismiss="modal " (click)="d('Cross click')">
           Hủy
         </button>
-        <button type="button " class="btn btn-primary min-w-100">
+                <button type="button " class="btn btn-primary min-w-100">
           Lưu thay đổi
         </button>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
-</ng-template>
+</ng-template> -->

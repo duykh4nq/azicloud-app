@@ -31,3 +31,18 @@ b {
     min-width: 760px;
     margin: 0 auto;
 }
+
+.fc-button .fc-button-primary {
+    background: #FFFFFF;
+    border: grey;
+    color: black;
+}
+
+.fc-icon-chevron-left .fc-icon-chevron-right {
+    margin-bottom: 5px;
+}
+
+li {
+    margin: 0 !important;
+    padding: 0;
+}

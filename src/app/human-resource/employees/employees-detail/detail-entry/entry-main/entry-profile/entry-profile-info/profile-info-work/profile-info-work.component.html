@@ -1,247 +1,130 @@
 <div class="row animated fadeInUp">
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>THÔNG TIN VIỆC LÀM</h5>
-      <div class="ibox-tools">
-        <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
-      </div>
-    </div>
-    <div class="ibox-content">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Mã nhân viên</label>
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Nhập mã nhân viên"
-                class="form-control"
-              />
+    <div class="ibox col-lg-12">
+        <app-work-job></app-work-job>
+        <!-- <div class="ibox-title">
+            <h5>THÔNG TIN VIỆC LÀM</h5>
+            <div class="ibox-tools">
+                <a href="" class="btn btn-primary btn-xs">Lưu thay đổi</a>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Chức danh</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="position"
-              [width]="420"
-              tabindex="2"
-              [placeholder]="'chọn loại chức danh..'"
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Loại việc làm</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="form"
-              [width]="420"
-              tabindex="2"
-              placeholder="Chọn loại việc làm.."
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Chi nhánh</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="branch"
-              [width]="420"
-              tabindex="2"
-              placeholder="Chọn chi nhánh.."
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Người quản lý trực tiếp</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="manager"
-              [width]="420"
-              tabindex="2"
-              placeholder="Chọn người quản lý trực tiếp.."
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Ngày bắt đầu thử việc</label>
-            <form class="form-inline">
-              <div class="input-group-append">
-                <button
-                  class="btn btn-outline calendar"
-                  (click)="d1.toggle()"
-                  type="button"
-                >
-                  <i class="fa fa-calendar"></i>
-                </button>
-              </div>
-              <input
-                class="form-control"
-                placeholder="dd/mm/yyyy"
-                name="d1"
-                #c1="ngModel"
-                [(ngModel)]="model1"
-                ngbDatepicker
-                #d1="ngbDatepicker"
-              />
-            </form>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Ngày bắt đầu hợp đồng</label>
-            <form class="form-inline">
-              <div class="input-group-append">
-                <button
-                  class="btn btn-outline calendar"
-                  (click)="d2.toggle()"
-                  type="button"
-                >
-                  <i class="fa fa-calendar"></i>
-                </button>
-              </div>
-              <input
-                class="form-control"
-                placeholder="dd/mm/yyyy"
-                name="d2"
-                #c2="ngModel"
-                [(ngModel)]="model2"
-                ngbDatepicker
-                #d2="ngbDatepicker"
-              />
-            </form>
-          </div>
         </div>
-        <div class="col-lg-6">
-          <div class="form-group">
-            <label class="font-normal">Tình trạng</label>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Mã nhân viên</label>
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập mã nhân viên" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Chức danh</label>
+                        <ng-select2 class="chosen-select" [data]="position" [width]="420" tabindex="2" [placeholder]="'chọn loại chức danh..'">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Loại việc làm</label>
+                        <ng-select2 class="chosen-select" [data]="form" [width]="420" tabindex="2" placeholder="Chọn loại việc làm..">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Chi nhánh</label>
+                        <ng-select2 class="chosen-select" [data]="branch" [width]="420" tabindex="2" placeholder="Chọn chi nhánh..">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Người quản lý trực tiếp</label>
+                        <ng-select2 class="chosen-select" [data]="manager" [width]="420" tabindex="2" placeholder="Chọn người quản lý trực tiếp..">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Ngày bắt đầu thử việc</label>
+                        <form class="form-inline">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline calendar" (click)="d1.toggle()" type="button">
+                  <i class="fa fa-calendar"></i>
+                </button>
+                            </div>
+                            <input class="form-control" placeholder="dd/mm/yyyy" name="d1" #c1="ngModel" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker" />
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Ngày bắt đầu hợp đồng</label>
+                        <form class="form-inline">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline calendar" (click)="d2.toggle()" type="button">
+                  <i class="fa fa-calendar"></i>
+                </button>
+                            </div>
+                            <input class="form-control" placeholder="dd/mm/yyyy" name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker" />
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="font-normal">Tình trạng</label>
 
-            <ng-select2
-              class="chosen-select"
-              [data]="status"
-              [width]="420"
-              tabindex="2"
-              placeholder="Chọn tình trạng.."
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Nhóm công việc</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="workgroup"
-              [width]="420"
-              tabindex="2"
-              placeholder="Chọn nhóm công việc.."
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Công ty</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="company"
-              [width]="420"
-              tabindex="2"
-              placeholder="Chọn công ty.."
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Phòng ban</label>
-            <ng-select2
-              class="chosen-select"
-              [data]="department"
-              [width]="420"
-              tabindex="2"
-              placeholder="Chọn phòng ban.."
-            >
-            </ng-select2>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Ngày tham gia</label>
-            <form class="form-inline">
-              <div class="input-group-append">
-                <button
-                  class="btn btn-outline calendar"
-                  (click)="d3.toggle()"
-                  type="button"
-                >
+                        <ng-select2 class="chosen-select" [data]="status" [width]="420" tabindex="2" placeholder="Chọn tình trạng..">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Nhóm công việc</label>
+                        <ng-select2 class="chosen-select" [data]="workgroup" [width]="420" tabindex="2" placeholder="Chọn nhóm công việc..">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Công ty</label>
+                        <ng-select2 class="chosen-select" [data]="company" [width]="420" tabindex="2" placeholder="Chọn công ty..">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Phòng ban</label>
+                        <ng-select2 class="chosen-select" [data]="department" [width]="420" tabindex="2" placeholder="Chọn phòng ban..">
+                        </ng-select2>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Ngày tham gia</label>
+                        <form class="form-inline">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline calendar" (click)="d3.toggle()" type="button">
                   <i class="fa fa-calendar"></i>
                 </button>
-              </div>
-              <input
-                class="form-control"
-                placeholder="dd/mm/yyyy"
-                name="d3"
-                #c3="ngModel"
-                [(ngModel)]="model3"
-                ngbDatepicker
-                #d3="ngbDatepicker"
-              />
-            </form>
-          </div>
-          <div class="form-group">
-            <label class="font-normal">Ngày kết thúc thử việc</label>
-            <form class="form-inline">
-              <div class="input-group-append">
-                <button
-                  class="btn btn-outline calendar"
-                  (click)="d4.toggle()"
-                  type="button"
-                >
+                            </div>
+                            <input class="form-control" placeholder="dd/mm/yyyy" name="d3" #c3="ngModel" [(ngModel)]="model3" ngbDatepicker #d3="ngbDatepicker" />
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-normal">Ngày kết thúc thử việc</label>
+                        <form class="form-inline">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline calendar" (click)="d4.toggle()" type="button">
                   <i class="fa fa-calendar"></i>
                 </button>
-              </div>
-              <input
-                class="form-control"
-                placeholder="dd/mm/yyyy"
-                name="d4"
-                #c4="ngModel"
-                [(ngModel)]="model4"
-                ngbDatepicker
-                #d4="ngbDatepicker"
-              />
-            </form>
-          </div>
+                            </div>
+                            <input class="form-control" placeholder="dd/mm/yyyy" name="d4" #c4="ngModel" [(ngModel)]="model4" ngbDatepicker #d4="ngbDatepicker" />
+                        </form>
+                    </div>
 
-          <div class="form-group">
-            <label class="font-normal">Ngày kết thúc hợp đồng</label>
-            <form class="form-inline">
-              <div class="input-group-append">
-                <button
-                  class="btn btn-outline calendar"
-                  (click)="d5.toggle()"
-                  type="button"
-                >
+                    <div class="form-group">
+                        <label class="font-normal">Ngày kết thúc hợp đồng</label>
+                        <form class="form-inline">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline calendar" (click)="d5.toggle()" type="button">
                   <i class="fa fa-calendar"></i>
                 </button>
-              </div>
-              <input
-                class="form-control"
-                placeholder="dd/mm/yyyy"
-                name="d5"
-                #c5="ngModel"
-                [(ngModel)]="model5"
-                ngbDatepicker
-                #d5="ngbDatepicker"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
+                            </div>
+                            <input class="form-control" placeholder="dd/mm/yyyy" name="d5" #c5="ngModel" [(ngModel)]="model5" ngbDatepicker #d5="ngbDatepicker" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
-  </div>
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>LỊCH LÀM VIỆC</h5>
-      <div class="ibox-tools">
-        <a
-          (click)="triggerModal(calendar)"
-          data-toggle="modal"
-          data-target="#popup-calender"
-          data-backdrop="static"
-          data-keyboard="false"
-          class="btn btn-primary btn-xs"
-          >Thêm mới</a
+    <div class="ibox col-lg-12">
+        <app-work-calender></app-work-calender>
+        <!-- <div class="ibox-title">
+            <h5>LỊCH LÀM VIỆC</h5>
+            <div class="ibox-tools">
+                <a (click)="triggerModal(calendar)" data-toggle="modal" data-target="#popup-calender" data-backdrop="static" data-keyboard="false" class="btn btn-primary btn-xs">Thêm mới</a
         >
       </div>
     </div>
@@ -265,43 +148,37 @@
               <td>Thứ 2, Thứ 3, Thứ 4</td>
               <td class="client-status text-right">
                 <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Rooney Lindsay</td>
-              <td>Proin Limited</td>
-              <td>20/10/2021</td>
-              <td>rooney@proin.com</td>
-              <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Lionel Mcmillan</td>
-              <td>Et Industries</td>
-              <td>20/10/2021</td>
-              <td>+432 955 908</td>
-              <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                </td>
+                </tr>
+                <tr>
+                    <td>Rooney Lindsay</td>
+                    <td>Proin Limited</td>
+                    <td>20/10/2021</td>
+                    <td>rooney@proin.com</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lionel Mcmillan</td>
+                    <td>Et Industries</td>
+                    <td>20/10/2021</td>
+                    <td>+432 955 908</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+        </div> -->
     </div>
-  </div>
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>LỊCH SỬ CÔNG TÁC</h5>
-      <div class="ibox-tools">
-        <a
-          (click)="triggerModal(job)"
-          data-toggle="modal"
-          data-target="#popup-job"
-          data-backdrop="static"
-          data-keyboard="false"
-          class="btn btn-primary btn-xs"
-          >Thêm mới</a
+    <div class="ibox col-lg-12">
+        <app-work-history></app-work-history>
+        <!-- <div class="ibox-title">
+            <h5>LỊCH SỬ CÔNG TÁC</h5>
+            <div class="ibox-tools">
+                <a (click)="triggerModal(job)" data-toggle="modal" data-target="#popup-job" data-backdrop="static" data-keyboard="false" class="btn btn-primary btn-xs">Thêm mới</a
         >
       </div>
     </div>
@@ -325,43 +202,37 @@
               <td>20/01/2018 - 20/05/2020</td>
               <td class="client-status text-right">
                 <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Rooney Lindsay</td>
-              <td>Proin Limited</td>
-              <td><span class="label label-primary">Primary</span></td>
-              <td>rooney@proin.com</td>
-              <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Lionel Mcmillan</td>
-              <td>Et Industries</td>
-              <td><span class="label label-info">Information</span></td>
-              <td>+432 955 908</td>
-              <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                </td>
+                </tr>
+                <tr>
+                    <td>Rooney Lindsay</td>
+                    <td>Proin Limited</td>
+                    <td><span class="label label-primary">Primary</span></td>
+                    <td>rooney@proin.com</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lionel Mcmillan</td>
+                    <td>Et Industries</td>
+                    <td><span class="label label-info">Information</span></td>
+                    <td>+432 955 908</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+        </div> -->
     </div>
-  </div>
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
-      <h5>HỢP ĐỒNG</h5>
-      <div class="ibox-tools">
-        <a
-          (click)="triggerModal(job)"
-          data-toggle="modal"
-          data-target="#popup-job"
-          data-backdrop="static"
-          data-keyboard="false"
-          class="btn btn-primary btn-xs"
-          >Thêm mới</a
+    <div class="ibox col-lg-12">
+        <app-work-contract></app-work-contract>
+        <!-- <div class="ibox-title">
+            <h5>HỢP ĐỒNG</h5>
+            <div class="ibox-tools">
+                <a (click)="triggerModal(job)" data-toggle="modal" data-target="#popup-job" data-backdrop="static" data-keyboard="false" class="btn btn-primary btn-xs">Thêm mới</a
         >
       </div>
     </div>
@@ -385,33 +256,34 @@
               <td>20/01/2018 - 20/05/2020</td>
               <td class="client-status text-right">
                 <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Rooney Lindsay</td>
-              <td>Proin Limited</td>
-              <td><span class="label label-primary">Primary</span></td>
-              <td>rooney@proin.com</td>
-              <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Lionel Mcmillan</td>
-              <td>Et Industries</td>
-              <td><span class="label label-info">Information</span></td>
-              <td>+432 955 908</td>
-              <td class="client-status text-right">
-                <a href="" class="btn btn-default btn-xs">Sửa</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                </td>
+                </tr>
+                <tr>
+                    <td>Rooney Lindsay</td>
+                    <td>Proin Limited</td>
+                    <td><span class="label label-primary">Primary</span></td>
+                    <td>rooney@proin.com</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lionel Mcmillan</td>
+                    <td>Et Industries</td>
+                    <td><span class="label label-info">Information</span></td>
+                    <td>+432 955 908</td>
+                    <td class="client-status text-right">
+                        <a href="" class="btn btn-default btn-xs">Sửa</a>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+        </div> -->
     </div>
-  </div>
-  <div class="ibox col-lg-12">
-    <div class="ibox-title">
+    <div class="ibox col-lg-12">
+        <app-work-asset></app-work-asset>
+        <!-- <div class="ibox-title">
       <h5>TÀI SẢN</h5>
       <div class="ibox-tools">
         <a
@@ -469,521 +341,281 @@
         </table>
       </div>
     </div>
-  </div>
-</div>
+  </div> -->
+    </div>
 
-<ng-template #calendar let-c="close" let-d="dismiss">
-  <div tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">THÔNG TIN LỊCH LÀM VIỆC</h4>
-      </div>
-      <div class="modal-body white-bg">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="form-group">
-              <label class="font-normal">Ca làm việc</label>
-              <ng-select2
-                class="chosen-select"
-                [data]="shift"
-                [width]="420"
-                tabindex="2"
-                placeholder="Chon ca lam viec.."
-              >
-              </ng-select2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="panel panel-default">
-              <div class="panel-heading white-bg font-weight-bold">
-                LỊCH LÀM VIỆC
-              </div>
-              <div class="panel-body">
-                <div class="form-group row">
-                  <label class="col-lg-2 col-form-label">Thứ 2</label>
-                  <section class="example-section">
-                    <material-slide-toggle
-                      [checked]="checked"
-                      [disabled]="disabled"
-                      [aria-label]="label"
-                      [aria-labelledby]="labelledby"
-                      (change)="onChange($event)"
-                    >
-                    </material-slide-toggle>
-                    <!-- <mat-slide-toggle class="example-margin" [name]="name3" [id]="id3" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
-                                      </mat-slide-toggle> -->
-                  </section>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
+    <!-- <ng-template #job let-c="close" let-d="dismiss">
+        <div tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content2">
+                <div class="modal-header">
+                    <h4 class="modal-title">THÔNG TIN VIỆC LÀM</h4>
                 </div>
-                <div class="form-group row">
-                  <label class="col-lg-2 col-form-label">Thứ 3</label>
-                  <section class="example-section">
-                    <material-slide-toggle
-                      [checked]="checked"
-                      [disabled]="disabled"
-                      [aria-label]="label"
-                      [aria-labelledby]="labelledby"
-                      (change)="onChange($event)"
-                    >
-                    </material-slide-toggle>
-                    <!-- <mat-slide-toggle class="example-margin" [name]="name3" [id]="id3" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
-                                      </mat-slide-toggle> -->
-                  </section>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="col-lg-2 col-form-label">Thứ 4</label>
-                  <section class="example-section">
-                    <material-slide-toggle
-                      [checked]="checked"
-                      [disabled]="disabled"
-                      [aria-label]="label"
-                      [aria-labelledby]="labelledby"
-                      (change)="onChange($event)"
-                    >
-                    </material-slide-toggle>
-                    <!-- <mat-slide-toggle class="example-margin" [name]="name4" [id]="id4" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
-                                      </mat-slide-toggle> -->
-                  </section>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="col-lg-2 col-form-label">Thứ 5</label>
-                  <section class="example-section">
-                    <material-slide-toggle
-                      [checked]="checked"
-                      [disabled]="disabled"
-                      [aria-label]="label"
-                      [aria-labelledby]="labelledby"
-                      (change)="onChange($event)"
-                    >
-                    </material-slide-toggle>
-                    <!-- <mat-slide-toggle class="example-margin" [name]="name5" [id]="id5" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
-                                      </mat-slide-toggle> -->
-                  </section>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="col-lg-2 col-form-label">Thứ 6</label>
-                  <section class="example-section">
-                    <material-slide-toggle
-                      [checked]="checked"
-                      [disabled]="disabled"
-                      [aria-label]="label"
-                      [aria-labelledby]="labelledby"
-                      (change)="onChange($event)"
-                    >
-                    </material-slide-toggle>
-
-                    <!-- <mat-slide-toggle class="example-margin" [name]="name6" [id]="id6" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
-                                      </mat-slide-toggle> -->
-                  </section>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="col-lg-2 col-form-label">Thứ 7</label>
-                  <section class="example-section">
-                    <material-slide-toggle
-                      [checked]="checked"
-                      [disabled]="disabled"
-                      [aria-label]="label"
-                      [aria-labelledby]="labelledby"
-                      (change)="onChange($event)"
-                    >
-                    </material-slide-toggle>
-                    <!-- <mat-slide-toggle class="example-margin" [name]="name7" [id]="id7" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
-                                      </mat-slide-toggle> -->
-                  </section>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="col-lg-2 col-form-label">Chủ nhật</label>
-                  <section class="example-section">
-                    <material-slide-toggle
-                      [checked]="checked"
-                      [disabled]="disabled"
-                      [aria-label]="label"
-                      [aria-labelledby]="labelledby"
-                      (change)="onChange($event)"
-                    >
-                    </material-slide-toggle>
-                    <!-- <mat-slide-toggle class="example-margin" [name]="namecn" [id]="idcn" [aria-label]="label" [aria-labelledby]="labelledby" [color]="color" [checked]="checked" [disabled]="disabled" (change)="onChange($event)">
-                                      </mat-slide-toggle> -->
-                  </section>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="md-form">
-                      <input
-                        type="time"
-                        id="input"
-                        class="form-control"
-                        value="13:00"
-                        mdbInput
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label class="font-normal">Ngày áp dụng</label>
-              <form class="form-inline">
-                <div class="input-group-append">
-                  <button
-                    class="btn btn-outline calendar"
-                    (click)="d6.toggle()"
-                    type="button"
-                  >
+                <div class="modal-body white-bg">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="font-normal">Chức danh</label>
+                                <ng-select2 class="chosen-select" [data]="position" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                </ng-select2>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-normal">Loại việc làm</label>
+                                <ng-select2 class="chosen-select" [data]="form" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                </ng-select2>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-normal">Công ty</label>
+                                <ng-select2 class="chosen-select" [data]="company" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                </ng-select2>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-normal">Phòng ban</label>
+                                <ng-select2 class="chosen-select" [data]="department" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                </ng-select2>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-normal">Ngày bắt đầu</label>
+                                <form class="form-inline">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline calendar" (click)="d7.toggle()" type="button">
                     <i class="fa fa-calendar"></i>
                   </button>
+                                    </div>
+                                    <input class="form-control" placeholder="dd/mm/yyyy" name="d7" #c7="ngModel" [(ngModel)]="model7" ngbDatepicker #d7="ngbDatepicker" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="font-normal">Tình trạng</label>
+                                <ng-select2 class="chosen-select" [data]="status" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                </ng-select2>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-normal">Nhóm công việc</label>
+                                <ng-select2 class="chosen-select" [data]="workgroup" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                </ng-select2>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-normal">Chi nhánh</label>
+                                <ng-select2 class="chosen-select" [data]="branch" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                </ng-select2>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-normal">Người quản lý trực tiếp</label>
+                                <ng-select2 class="chosen-select" [data]="manager" [width]="205" tabindex="2" placeholder="Chon ca lam viec..">
+                                </ng-select2>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-normal">Ngày kết thúc</label>
+                                <form class="form-inline">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline calendar" (click)="d8.toggle()" type="button">
+                    <i class="fa fa-calendar"></i>
+                  </button>
+                                    </div>
+                                    <input class="form-control" placeholder="dd/mm/yyyy" name="d8" #c8="ngModel" [(ngModel)]="model8" ngbDatepicker #d8="ngbDatepicker" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <input
-                  class="form-control"
-                  placeholder="dd/mm/yyyy"
-                  name="d6"
-                  #c6="ngModel"
-                  [(ngModel)]="model6"
-                  ngbDatepicker
-                  #d6="ngbDatepicker"
-                />
-              </form>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label class="font-normal">Tổng thời gian/ tuần</label>
-              <div class="input-group">
-                <input
-                  type="text"
-                  readonly
-                  placeholder="Tổng số thời gian làm việc trong tuần"
-                  value="0"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-white min-w-100"
-          data-dismiss="modal"
-          (click)="d('Cross click')"
-        >
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">
           Hủy
         </button>
-        <button type="button" class="btn btn-primary min-w-100">
+                    <button type="button" class="btn btn-primary min-w-100">
           Lưu thay đổi
         </button>
-      </div>
-    </div>
-  </div>
-</ng-template>
-<ng-template #job let-c="close" let-d="dismiss">
-  <div tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content2">
-      <div class="modal-header">
-        <h4 class="modal-title">THÔNG TIN VIỆC LÀM</h4>
-      </div>
-      <div class="modal-body white-bg">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label class="font-normal">Chức danh</label>
-              <ng-select2
-                class="chosen-select"
-                [data]="position"
-                [width]="205"
-                tabindex="2"
-                placeholder="Chon ca lam viec.."
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Loại việc làm</label>
-              <ng-select2
-                class="chosen-select"
-                [data]="form"
-                [width]="205"
-                tabindex="2"
-                placeholder="Chon ca lam viec.."
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Công ty</label>
-              <ng-select2
-                class="chosen-select"
-                [data]="company"
-                [width]="205"
-                tabindex="2"
-                placeholder="Chon ca lam viec.."
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Phòng ban</label>
-              <ng-select2
-                class="chosen-select"
-                [data]="department"
-                [width]="205"
-                tabindex="2"
-                placeholder="Chon ca lam viec.."
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Ngày bắt đầu</label>
-              <form class="form-inline">
-                <div class="input-group-append">
-                  <button
-                    class="btn btn-outline calendar"
-                    (click)="d7.toggle()"
-                    type="button"
-                  >
-                    <i class="fa fa-calendar"></i>
-                  </button>
                 </div>
-                <input
-                  class="form-control"
-                  placeholder="dd/mm/yyyy"
-                  name="d7"
-                  #c7="ngModel"
-                  [(ngModel)]="model7"
-                  ngbDatepicker
-                  #d7="ngbDatepicker"
-                />
-              </form>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label class="font-normal">Tình trạng</label>
-              <ng-select2
-                class="chosen-select"
-                [data]="status"
-                [width]="205"
-                tabindex="2"
-                placeholder="Chon ca lam viec.."
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Nhóm công việc</label>
-              <ng-select2
-                class="chosen-select"
-                [data]="workgroup"
-                [width]="205"
-                tabindex="2"
-                placeholder="Chon ca lam viec.."
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Chi nhánh</label>
-              <ng-select2
-                class="chosen-select"
-                [data]="branch"
-                [width]="205"
-                tabindex="2"
-                placeholder="Chon ca lam viec.."
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Người quản lý trực tiếp</label>
-              <ng-select2
-                class="chosen-select"
-                [data]="manager"
-                [width]="205"
-                tabindex="2"
-                placeholder="Chon ca lam viec.."
-              >
-              </ng-select2>
-            </div>
-            <div class="form-group">
-              <label class="font-normal">Ngày kết thúc</label>
-              <form class="form-inline">
-                <div class="input-group-append">
-                  <button
-                    class="btn btn-outline calendar"
-                    (click)="d8.toggle()"
-                    type="button"
-                  >
-                    <i class="fa fa-calendar"></i>
-                  </button>
-                </div>
-                <input
-                  class="form-control"
-                  placeholder="dd/mm/yyyy"
-                  name="d8"
-                  #c8="ngModel"
-                  [(ngModel)]="model8"
-                  ngbDatepicker
-                  #d8="ngbDatepicker"
-                />
-              </form>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-white min-w-100"
-          data-dismiss="modal"
-          (click)="d('Cross click')"
-        >
+    </ng-template> -->
+    <!-- <ng-template #calendar let-c="close" let-d="dismiss">
+        <div tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">THÔNG TIN LỊCH LÀM VIỆC</h4>
+                </div>
+                <div class="modal-body white-bg">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="font-normal">Ca làm việc</label>
+                                <ng-select2 class="chosen-select" [data]="shift" [width]="420" tabindex="2" placeholder="Chon ca lam viec..">
+                                </ng-select2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading white-bg font-weight-bold">
+                                    LỊCH LÀM VIỆC
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-form-label">Thứ 2</label>
+                                        <section class="example-section">
+                                            <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                            </material-slide-toggle>
+
+                                        </section>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-form-label">Thứ 3</label>
+                                        <section class="example-section">
+                                            <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                            </material-slide-toggle>
+
+                                        </section>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-form-label">Thứ 4</label>
+                                        <section class="example-section">
+                                            <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                            </material-slide-toggle>
+
+                                        </section>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-form-label">Thứ 5</label>
+                                        <section class="example-section">
+                                            <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                            </material-slide-toggle>
+
+                                        </section>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-form-label">Thứ 6</label>
+                                        <section class="example-section">
+                                            <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                            </material-slide-toggle>
+
+                                        </section>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-form-label">Thứ 7</label>
+                                        <section class="example-section">
+                                            <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                            </material-slide-toggle>
+
+                                        </section>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-form-label">Chủ nhật</label>
+                                        <section class="example-section">
+                                            <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                            </material-slide-toggle>
+
+                                        </section>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="md-form">
+                                                <input type="time" id="input" class="form-control" value="13:00" mdbInput />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="font-normal">Ngày áp dụng</label>
+                                <form class="form-inline">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline calendar" (click)="d6.toggle()" type="button">
+                    <i class="fa fa-calendar"></i>
+                  </button>
+                                    </div>
+                                    <input class="form-control" placeholder="dd/mm/yyyy" name="d6" #c6="ngModel" [(ngModel)]="model6" ngbDatepicker #d6="ngbDatepicker" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="font-normal">Tổng thời gian/ tuần</label>
+                                <div class="input-group">
+                                    <input type="text" readonly placeholder="Tổng số thời gian làm việc trong tuần" value="0" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">
           Hủy
         </button>
-        <button type="button" class="btn btn-primary min-w-100">
+                    <button type="button" class="btn btn-primary min-w-100">
           Lưu thay đổi
         </button>
-      </div>
-    </div>
-  </div>
-</ng-template>
+                </div>
+            </div>
+        </div>
+    </ng-template> -->

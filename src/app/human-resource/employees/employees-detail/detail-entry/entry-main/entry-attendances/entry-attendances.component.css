@@ -45,3 +45,102 @@
 .dropdown-menu>button.font-bold {
     font-weight: 600;
 }
+
+.attendances-navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.attendances-navbar button,
+form,
+ng-select2 {
+    padding-left: 5px;
+}
+
+.select-attendances {
+    margin-top: 5px;
+}
+
+.select2-container {
+    background-color: cornflowerblue;
+}
+
+.form-inline {
+    width: 240px;
+}
+
+.form-inline button i {
+    padding: 4px;
+    text-align: center;
+    justify-content: center;
+}
+
+.form-control {
+    border-right: 0;
+}
+
+.btn {
+    text-align: center;
+    border-radius: 2px;
+    height: 36px;
+}
+
+.calendar {
+    text-align: center;
+    justify-content: center;
+    /* border-left: 0; */
+}
+
+
+/* .calendar:hover {
+    border-left: 0;
+} */
+
+table {
+    width: 100%;
+}
+
+table,
+tr,
+th,
+td {
+    border: 1px solid rgb(218, 218, 218);
+    border-collapse: collapse;
+}
+
+table tr td {
+    height: 40px;
+}
+
+table tr td button {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.item-th {
+    align-items: center;
+    text-align: center;
+}
+
+table i {
+    padding: 5px;
+}
+
+table input {
+    outline: none;
+    border: 0;
+    height: 30px;
+    width: 90%;
+}
+
+.privilege-btn .btn-white {
+    background-color: #0e7fe1;
+    color: white;
+}
+
+.privilege {
+    display: flex;
+    flex-direction: row-reverse !important;
+}

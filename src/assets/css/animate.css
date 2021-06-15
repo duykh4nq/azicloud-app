@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -30,7 +31,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @-webkit-keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
@@ -45,7 +50,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
         transform: translateY(0);
@@ -68,19 +77,25 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @-webkit-keyframes flash {
-    0%, 50%, 100% {
+    0%,
+    50%,
+    100% {
         opacity: 1;
     }
-    25%, 75% {
+    25%,
+    75% {
         opacity: 0;
     }
 }
 
 @keyframes flash {
-    0%, 50%, 100% {
+    0%,
+    50%,
+    100% {
         opacity: 1;
     }
-    25%, 75% {
+    25%,
+    75% {
         opacity: 0;
     }
 }
@@ -89,6 +104,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-animation-name: flash;
     animation-name: flash;
 }
+
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
@@ -187,32 +203,48 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @-webkit-keyframes shake {
-    0%, 100% {
+    0%,
+    100% {
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
-    10%, 30%, 50%, 70%, 90% {
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
         -webkit-transform: translateX(-10px);
         transform: translateX(-10px);
     }
-    20%, 40%, 60%, 80% {
+    20%,
+    40%,
+    60%,
+    80% {
         -webkit-transform: translateX(10px);
         transform: translateX(10px);
     }
 }
 
 @keyframes shake {
-    0%, 100% {
+    0%,
+    100% {
         -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
         transform: translateX(0);
     }
-    10%, 30%, 50%, 70%, 90% {
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
     }
-    20%, 40%, 60%, 80% {
+    20%,
+    40%,
+    60%,
+    80% {
         -webkit-transform: translateX(10px);
         -ms-transform: translateX(10px);
         transform: translateX(10px);
@@ -288,15 +320,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-    10%, 20% {
+    10%,
+    20% {
         -webkit-transform: scale(0.9) rotate(-3deg);
         transform: scale(0.9) rotate(-3deg);
     }
-    30%, 50%, 70%, 90% {
+    30%,
+    50%,
+    70%,
+    90% {
         -webkit-transform: scale(1.1) rotate(3deg);
         transform: scale(1.1) rotate(3deg);
     }
-    40%, 60%, 80% {
+    40%,
+    60%,
+    80% {
         -webkit-transform: scale(1.1) rotate(-3deg);
         transform: scale(1.1) rotate(-3deg);
     }
@@ -312,17 +350,23 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         -ms-transform: scale(1);
         transform: scale(1);
     }
-    10%, 20% {
+    10%,
+    20% {
         -webkit-transform: scale(0.9) rotate(-3deg);
         -ms-transform: scale(0.9) rotate(-3deg);
         transform: scale(0.9) rotate(-3deg);
     }
-    30%, 50%, 70%, 90% {
+    30%,
+    50%,
+    70%,
+    90% {
         -webkit-transform: scale(1.1) rotate(3deg);
         -ms-transform: scale(1.1) rotate(3deg);
         transform: scale(1.1) rotate(3deg);
     }
-    40%, 60%, 80% {
+    40%,
+    60%,
+    80% {
         -webkit-transform: scale(1.1) rotate(-3deg);
         -ms-transform: scale(1.1) rotate(-3deg);
         transform: scale(1.1) rotate(-3deg);
@@ -338,6 +382,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-animation-name: tada;
     animation-name: tada;
 }
+
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
@@ -1048,7 +1093,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 @-webkit-keyframes fadeInRight {
     0% {
-        opacity: 0;
         -webkit-transform: translateX(20px);
         transform: translateX(20px);
     }
@@ -2503,7 +2547,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         -webkit-animation-timing-function: ease-in-out;
         animation-timing-function: ease-in-out;
     }
-    20%, 60% {
+    20%,
+    60% {
         -webkit-transform: rotate(80deg);
         transform: rotate(80deg);
         -webkit-transform-origin: top left;
@@ -2546,7 +2591,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         -webkit-animation-timing-function: ease-in-out;
         animation-timing-function: ease-in-out;
     }
-    20%, 60% {
+    20%,
+    60% {
         -webkit-transform: rotate(80deg);
         -ms-transform: rotate(80deg);
         transform: rotate(80deg);
@@ -2590,6 +2636,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-name: hinge;
 }
 
+
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes rollIn {
@@ -2624,6 +2671,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-animation-name: rollIn;
     animation-name: rollIn;
 }
+
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 

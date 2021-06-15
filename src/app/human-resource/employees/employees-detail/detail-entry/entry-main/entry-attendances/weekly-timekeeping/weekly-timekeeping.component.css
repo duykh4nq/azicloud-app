@@ -1,0 +1,277 @@
+@import "../../../../../../employees/employees.component.css";
+.dropdown-menu {
+    border: medium none;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(86, 96, 117, 0.7);
+    display: none;
+    float: left;
+    font-size: 12px;
+    left: 0;
+    list-style: none outside none;
+    padding: 0;
+    position: absolute;
+    text-shadow: none;
+    top: 100%;
+    z-index: 1000;
+}
+
+.dropdown-menu>button {
+    border-radius: 3px;
+    color: inherit;
+    line-height: 25px;
+    width: 100%;
+    text-align: left;
+    font-weight: normal;
+    display: block;
+    padding: 3px 20px;
+}
+
+.dropdown-menu>button:focus,
+.dropdown-menu>button:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu>.active>button,
+.dropdown-menu>.active>button:focus,
+.dropdown-menu>.active>button:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #34499d;
+    outline: 0;
+}
+
+.dropdown-menu>button.font-bold {
+    font-weight: 600;
+}
+
+.attendances-navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.attendances-navbar button,
+form,
+ng-select2 {
+    padding-left: 5px;
+}
+
+.select-attendances {
+    margin-top: 5px;
+}
+
+.select2-container {
+    background-color: cornflowerblue;
+}
+
+.form-inline {
+    width: 240px;
+}
+
+.form-inline button i {
+    padding: 4px;
+    text-align: center;
+    justify-content: center;
+}
+
+.form-control {
+    border-right: 0;
+}
+
+.btn {
+    text-align: center;
+    border-radius: 2px;
+    height: 36px;
+}
+
+.calendar {
+    text-align: center;
+    justify-content: center;
+    /* border-left: 0; */
+}
+
+
+/* .calendar:hover {
+    border-left: 0;
+} */
+
+table {
+    width: 100%;
+}
+
+table,
+tr,
+th,
+td {
+    border: 1px solid rgb(218, 218, 218);
+    border-collapse: collapse;
+}
+
+table tr td {
+    height: 40px;
+}
+
+table tr td button {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.item-th {
+    align-items: center;
+    text-align: center;
+}
+
+table i {
+    padding: 5px;
+}
+
+table input {
+    outline: none;
+    border: 0;
+    height: 30px;
+    width: 90%;
+}
+
+.privilege-btn .btn-white {
+    background-color: #0e7fe1;
+    color: white;
+}
+
+.privilege {
+    display: flex;
+    flex-direction: row-reverse !important;
+}
+
+.add-employee {
+    background-color: white;
+    border: 0px solid white !important;
+    margin-left: 5px;
+    color: #34499d;
+    text-align: left;
+    margin-left: -5px;
+}
+
+
+/* .bca {
+    position: relative;
+    height: 70px !important;
+} */
+
+.overlay-action {
+    display: flex;
+    flex-direction: row;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px; */
+    margin: auto;
+    position: absolute;
+    top: 41%;
+}
+
+.overlay-action .btn {
+    font-size: 10px !important;
+    font-weight: auto !important;
+    margin-left: 3px;
+    color: white !important;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold !important;
+    border: 0px !important;
+    margin-right: 1px;
+}
+
+.overlay-action .btn:hover {
+    border: 1px solid whitesmoke !important;
+}
+
+
+/* .timekeeping {
+    height: 70px !important;
+} */
+
+.timekeeping:hover .btn {
+    opacity: 2;
+    margin-top: center;
+    background-color: rgba(56, 212, 106, 0.8);
+    border: 1px solid whitesmoke !important;
+}
+
+.timekeeping:hover {
+    background-color: rgba(56, 212, 106, 0.8);
+}
+
+.time-edit .btn {
+    background-color: #34499d;
+    border-radius: 5px solid solid #34499d !important;
+    color: white;
+    margin-right: -2px;
+}
+
+.time-edit {
+    display: flex;
+    flex-direction: row-reverse !important;
+    margin-right: -5px;
+}
+
+.time-checked {
+    display: flex;
+    flex-direction: row;
+}
+
+.timepicker {
+    width: auto !important;
+}
+
+.ca-checked {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.md-form {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.content-mini {
+    width: 500px !important;
+    margin-left: 5em !important;
+    margin-top: 5em !important;
+}
+
+
+/* .content-shift {
+    width: 500px !important;
+    margin-left: 5em !important;
+    margin-top: 5em !important;
+} */
+
+.time-edit .edit {
+    width: 60px;
+    border-radius: 5px solid #34499d;
+}
+
+.form-control {
+    border-right: 1px solid#e5e6e7;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-search--dropdown .select2-search__field {
+    width: 98%;
+}
+
+.form-inline {
+    width: 300px;
+}
+
+.form-inline .form-control {
+    height: 38px;
+    width: calc(100% - 50px);
+}

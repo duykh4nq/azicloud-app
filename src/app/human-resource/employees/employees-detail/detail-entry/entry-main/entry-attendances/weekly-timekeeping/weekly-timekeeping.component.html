@@ -1,0 +1,809 @@
+<div class="row" style="margin-top: 10px">
+    <div class="col-lg-12">
+        <table>
+            <tr class="header-table">
+                <th>
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="Tìm kiếm" />
+                </th>
+                <th class="item-th">
+                    <p>T2</p>
+                    <p>1/6</p>
+                </th>
+                <th class="item-th">
+                    <p>T3</p>
+                    <p>2/6</p>
+                </th>
+                <th class="item-th">
+                    <p>T4</p>
+                    <p>3/6</p>
+                </th>
+                <th class="item-th">
+                    <p>T5</p>
+                    <p>4/6</p>
+                </th>
+                <th class="item-th">
+                    <p>T6</p>
+                    <p>5/6</p>
+                </th>
+                <th class="item-th">
+                    <p>T7</p>
+                    <p>6/6</p>
+                </th>
+                <th class="item-th">
+                    <p>CN</p>
+                    <p>7/6</p>
+                </th>
+            </tr>
+            <tr>
+                <td class="employee" style="margin-left: 5px;"><i class="fa fa-user-circle"></i>Nhân viên Demo</td>
+                <td class="bca">
+                    <div class="timekeeping">
+                        <div class="name">
+                            <span class="font-weight-bold">Ca hành chính</span>
+                        </div>
+                        <span class="clock-in-out-time text-secondary font-size-10">(<span>08:00</span><span>-</span><span>17:30</span><span>)</span></span>
+                        <div class="overlay-action">
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(see)">-</button>
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(add)">+</button>
+                            <!-- <button class="btn action" type="button">. . .</button> -->
+                            <div ngbDropdown class="d-inline-block">
+                                <button class="btn action" id="dropdownBasic1" ngbDropdownToggle type="button">. . .</button>
+                                <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button ngbDropdownItem type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(leave) ">Tạo yêu cầu nghỉ phép</button>
+                                    <button ngbDropdownItem>Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="bca">
+                    <div class="timekeeping">
+                        <div class="name">
+                            <span class="font-weight-bold">Ca hành chính</span>
+                        </div>
+                        <span class="clock-in-out-time text-secondary font-size-10">(<span>08:00</span><span>-</span><span>17:30</span><span>)</span></span>
+                        <div class="overlay-action">
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(see)">1</button>
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(add)">+</button>
+                            <!-- <button class="btn action" type="button">. . .</button> -->
+                            <div ngbDropdown class="d-inline-block">
+                                <button class="btn action" id="dropdownBasic1" ngbDropdownToggle type="button">. . .</button>
+                                <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button ngbDropdownItem type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(leave) ">Tạo yêu cầu nghỉ phép</button>
+                                    <button ngbDropdownItem>Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="bca">
+                    <div class="timekeeping">
+                        <div class="name">
+                            <span class="font-weight-bold">Ca hành chính</span>
+                        </div>
+                        <span class="clock-in-out-time text-secondary font-size-10">(<span>08:00</span><span>-</span><span>17:30</span><span>)</span></span>
+                        <div class="overlay-action">
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(see)">1</button>
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(add)">+</button>
+                            <!-- <button class="btn action" type="button">. . .</button> -->
+                            <div ngbDropdown class="d-inline-block">
+                                <button class="btn action" id="dropdownBasic1" ngbDropdownToggle type="button">. . .</button>
+                                <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button ngbDropdownItem type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(leave) ">Tạo yêu cầu nghỉ phép</button>
+                                    <button ngbDropdownItem>Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="bca">
+                    <div class="timekeeping">
+                        <div class="name">
+                            <span class="font-weight-bold">Ca hành chính</span>
+                        </div>
+                        <span class="clock-in-out-time text-secondary font-size-10">(<span>08:00</span><span>-</span><span>17:30</span><span>)</span></span>
+                        <div class="overlay-action">
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(see)">1</button>
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(add)">+</button>
+                            <!-- <button class="btn action" type="button">. . .</button> -->
+                            <div ngbDropdown class="d-inline-block">
+                                <button class="btn action" id="dropdownBasic1" ngbDropdownToggle type="button">. . .</button>
+                                <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button ngbDropdownItem type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(leave) ">Tạo yêu cầu nghỉ phép</button>
+                                    <button ngbDropdownItem>Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="bca">
+                    <div class="timekeeping">
+                        <div class="name">
+                            <span class="font-weight-bold">Ca hành chính</span>
+                        </div>
+                        <span class="clock-in-out-time text-secondary font-size-10">(<span>08:00</span><span>-</span><span>17:30</span><span>)</span></span>
+                        <div class="overlay-action">
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(see)">1</button>
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(add)">+</button>
+                            <!-- <button class="btn action" type="button">. . .</button> -->
+                            <div ngbDropdown class="d-inline-block">
+                                <button class="btn action" id="dropdownBasic1" ngbDropdownToggle type="button">. . .</button>
+                                <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button ngbDropdownItem type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(leave) ">Tạo yêu cầu nghỉ phép</button>
+                                    <button ngbDropdownItem>Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="bca">
+                    <div class="timekeeping">
+                        <div class="name">
+                            <span class="font-weight-bold">Ca hành chính</span>
+                        </div>
+                        <span class="clock-in-out-time text-secondary font-size-10">(<span>08:00</span><span>-</span><span>17:30</span><span>)</span></span>
+                        <div class="overlay-action">
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(see)">1</button>
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(add)">+</button>
+                            <!-- <button class="btn action" type="button">. . .</button> -->
+                            <div ngbDropdown class="d-inline-block">
+                                <button class="btn action" id="dropdownBasic1" ngbDropdownToggle type="button">. . .</button>
+                                <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button ngbDropdownItem type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(leave) ">Tạo yêu cầu nghỉ phép</button>
+                                    <button ngbDropdownItem>Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="bca">
+                    <div class="timekeeping">
+                        <div class="name">
+                            <span class="font-weight-bold">Ca hành chính</span>
+                        </div>
+                        <span class="clock-in-out-time text-secondary font-size-10">(<span>08:00</span><span>-</span><span>17:30</span><span>)</span></span>
+                        <div class="overlay-action">
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(see)">1</button>
+                            <button class="btn action" type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(add)">+</button>
+                            <!-- <button class="btn action" type="button">. . .</button> -->
+                            <div ngbDropdown class="d-inline-block">
+                                <button class="btn action" id="dropdownBasic1" ngbDropdownToggle type="button">. . .</button>
+                                <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button ngbDropdownItem type="button" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(leave) ">Tạo yêu cầu nghỉ phép</button>
+                                    <button ngbDropdownItem>Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="employee"><i class="fa fa-user-circle"></i>Azi</td>
+                <td>
+                    <div class="name">
+                        <span class="font-weight-bold">Ca hành chính</span>
+                    </div>
+                    <span class="clock-in-out-time text-secondary font-size-10">
+              (
+                <span>08:00</span>
+                    <span> - </span>
+                    <span>17:30</span>
+                    <span>)</span>
+                    </span>
+                </td>
+                <td>
+                    <div class="name">
+                        <span class="font-weight-bold">Ca hành chính</span>
+                    </div>
+                    <span class="clock-in-out-time text-secondary font-size-10">
+            (
+              <span>08:00</span>
+                    <span> - </span>
+                    <span>17:30</span>
+                    <span>)</span>
+                    </span>
+                </td>
+                <td>
+                    <div class="name">
+                        <span class="font-weight-bold">Ca hành chính</span>
+                    </div>
+                    <span class="clock-in-out-time text-secondary font-size-10">
+          (
+            <span>08:00</span>
+                    <span> - </span>
+                    <span>17:30</span>
+                    <span>)</span>
+                    </span>
+                </td>
+                <td>
+                    <div class="name">
+                        <span class="font-weight-bold">Ca hành chính</span>
+                    </div>
+                    <span class="clock-in-out-time text-secondary font-size-10">
+        (
+          <span>08:00</span>
+                    <span> - </span>
+                    <span>17:30</span>
+                    <span>)</span>
+                    </span>
+                </td>
+                <td>
+                    <div class="name">
+                        <span class="font-weight-bold">Ca hành chính</span>
+                    </div>
+                    <span class="clock-in-out-time text-secondary font-size-10">
+      (
+        <span>08:00</span>
+                    <span> - </span>
+                    <span>17:30</span>
+                    <span>)</span>
+                    </span>
+                </td>
+                <td>
+                    <div class="name">
+                        <span class="font-weight-bold">Ca hành chính</span>
+                    </div>
+                    <span class="clock-in-out-time text-secondary font-size-10">
+    (
+      <span>08:00</span>
+                    <span> - </span>
+                    <span>17:30</span>
+                    <span>)</span>
+                    </span>
+                </td>
+                <td>
+                    <div class="name">
+                        <span class="font-weight-bold">Ca hành chính</span>
+                    </div>
+                    <span class="clock-in-out-time text-secondary font-size-10">
+  (
+    <span>08:00</span>
+                    <span> - </span>
+                    <span>17:30</span>
+                    <span>)</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: #34499d !important">
+                    <div data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(content)">
+                        <button class="add-employee"><i class="fa fa-user-circle"></i>Thêm nhân viên</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div id="popup-employee-create" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">THÊM NHÂN VIÊN</h4>
+            </div>
+            <div class="modal-body white-bg">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="font-normal">Họ và tên</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="Nhập họ và tên" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Điện thoại</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="Nhập điện thoại" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Email</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="Nhập email" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">
+          Hủy
+        </button>
+                <button type="button" class="btn btn-primary min-w-100">
+          Tạo nhân viên
+        </button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #see let-c="close" let-d="dismiss">
+    <div id="popup-employee-create" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">CA HÀNH CHÍNH</h4>
+                <div class="text-center" style="font-size:16px">Thứ 2 08/06/2021</div>
+            </div>
+            <div class="modal-body white-bg">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="time">
+                                <div>9.5 tiếng</div>
+                                <span class="" style="font-size: 10px">8:30 - 17:30</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="time-checked">
+                                <section class="example-section">
+                                    <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                    </material-slide-toggle>
+                                </section>
+                                <span>7:30</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="time-checked">
+                                <section class="example-section">
+                                    <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                    </material-slide-toggle>
+                                </section>
+                                <span class="">17:30</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="time-edit">
+                                <button class="btn btn-white edit" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(edit)" onclick="document.getElementById('id01').style.display='block'">Sữa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox col-lg-12">
+                <div class="ibox-title">
+                    <h5>LỊCH LÀM VIỆC</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Thời gian</th>
+                                    <th>Người thực hiện</th>
+                                    <th>Mô tả</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>10:30 AM</td>
+                                    <td>Admin</td>
+                                    <td>Chỉnh sữa</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>10:30 AM</td>
+                                    <td>Admin</td>
+                                    <td>Chỉnh sữa</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>10:30 AM</td>
+                                    <td>Admin</td>
+                                    <td>Chỉnh sữa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">Hủy</button>
+                    <button type="button" class="btn btn-primary min-w-100">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div id="popup-employee-create" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">THÊM NHÂN VIÊN</h4>
+            </div>
+            <div class="modal-body white-bg">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="font-normal">Họ và tên</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="Nhập họ và tên" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Điện thoại</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="Nhập điện thoại" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-normal">Email</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="Nhập email" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">
+        Hủy
+      </button>
+                <button type="button" class="btn btn-primary min-w-100">
+        Tạo nhân viên
+      </button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #edit let-c="close" let-d="dismiss" onclick="document.getElementById('id01').style.display='none'">
+    <div id="popup-employee-create" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content content-mini">
+            <div class="modal-header">
+                <span>
+                <div class="" style="font-size: 15px;">Chỉnh sửa ngày công <strong>Ca hành chính, Thứ ba 08/06/2021</strong></div>
+              </span>
+            </div>
+            <div class="modal-body white-bg">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <div>Bắt đầu</div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <div class="md-form">
+                                <input type="time" id="input" class="form-control timepicker" value="13:00" mdbInput />
+                            </div>
+                            <!-- <div class="time-checked">
+                                <section class="example-section">
+                                    <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                    </material-slide-toggle>
+                                </section>
+                                <span class="">Bắt đầu vào hôm sau ?</span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <div>Kết thúc</div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <div class="md-form">
+                                <input type="time" id="input" class="form-control timepicker" value="13:00" mdbInput />
+                            </div>
+                            <!-- <div class="time-checked">
+                                <section class="example-section">
+                                    <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                    </material-slide-toggle>
+                                </section>
+                                <span class="">Kết thúc vào hôm sau ?</span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="font-normal">Vui lòng nhập lý do sữa đổi</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Nhập lý do sủa đổi" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">
+      Hủy
+    </button>
+                <button type="button" class="btn btn-primary min-w-100">
+      OK
+    </button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #see let-c="close" let-d="dismiss">
+    <div id="popup-employee-create" style="width: 400px;" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content content-shift">
+            <div class="modal-header">
+                <h4 class="modal-title">CA HÀNH CHÍNH</h4>
+                <div class="text-center" style="font-size:16px">Thứ 2 08/06/2021</div>
+            </div>
+            <div class="modal-body white-bg">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="time">
+                                <div>9.5 tiếng</div>
+                                <span class="" style="font-size: 10px">8:30 - 17:30</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="time-checked">
+                                <section class="example-section">
+                                    <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                    </material-slide-toggle>
+                                </section>
+                                <span>7:30</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="time-checked">
+                                <section class="example-section">
+                                    <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                    </material-slide-toggle>
+                                </section>
+                                <span class="">17:30</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="time-edit">
+                                <button class="btn btn-white edit" data-toggle="modal" data-target="#popup-employee-create" data-backdrop="static" data-keyboard="false" (click)="triggerModal(edit)">Sữa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox col-lg-12">
+                <div class="ibox-title">
+                    <h5>LỊCH LÀM VIỆC</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Thời gian</th>
+                                    <th>Người thực hiện</th>
+                                    <th>Mô tả</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>10:30 AM</td>
+                                    <td>Admin</td>
+                                    <td>Chỉnh sữa</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>10:30 AM</td>
+                                    <td>Admin</td>
+                                    <td>Chỉnh sữa</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>10:30 AM</td>
+                                    <td>Admin</td>
+                                    <td>Chỉnh sữa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">Hủy</button>
+                    <button type="button" class="btn btn-primary min-w-100">OK</button>
+                </div>
+            </div>s
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #add let-c="close" let-d="dismiss">
+    <div id="popup-employee-create" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">Thứ 3 08/06/2021</span>
+            </div>
+            <div class="modal-body white-bg">
+                <div class=col-lg-12>
+                    <div class="row m-b-sm m-t-sm">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <input type="text" placeholder="Nhập từ khóa tìm kiếm" class="form-control-sm form-control" />
+                                <span class="input-group-btn">
+                        <button type="button" class="btn btn-sm btn-primary" style="height: 31px">Tìm kiếm</button>
+                      </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="title-group">
+                                <span class="">Ca hành chính (8:00 - 17:30)</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ca-checked">
+                                <section class="example-section">
+                                    <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                    </material-slide-toggle>
+                                </section>
+                                <span class=""></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="title-group">
+                                <span class="">Ca chủ nhật (8:00 - 12:00)</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ca-checked">
+                                <section class="example-section">
+                                    <material-slide-toggle [checked]="checked" [disabled]="disabled" [aria-label]="label" [aria-labelledby]="labelledby" (change)="onChange($event)">
+                                    </material-slide-toggle>
+                                </section>
+                                <span class=""></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">
+      Hủy
+    </button>
+                <button type="button" class="btn btn-primary min-w-100">
+      OK
+    </button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #leave let-c="close" let-d="dismiss">
+    <div id="popup-employee-create" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">TẠO YÊU CẦU NGHỈ PHÉP</h4>
+            </div>
+            <div class="modal-body white-bg">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Nhân viên</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="Nhập tôn giáo" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="font-normal">Loại</label>
+                            <ng-select2 class="chosen-select" width="150px" [data]="species" tabindex="2" placeholder="Chọn tình trạng..">
+                            </ng-select2>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="font-normal">Loại nghỉ phép</label>
+                            <ng-select2 class="chosen-select" width="150px" [data]="species" tabindex="2" placeholder="Chọn tình trạng..">
+                            </ng-select2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="">
+                                <tr>
+                                    <th>Loại nghỉ phép</th>
+                                    <th>Tổng số ngày nghỉ</th>
+                                    <th>Ngày nghỉ năm nay</th>
+                                    <th>Đã nghỉ</th>
+                                    <th>Còn Tồn</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nghĩ không lương</td>
+                                    <td>30</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>Nghĩ tiêu chuẩn</td>
+                                    <td>30</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label class="font-normal">Ngày bắt đầu</label>
+                        <div class="form-group">
+                            <form class="form-inline">
+                                <div class="input-group-append"></div>
+                                <button class="btn btn-white calendar" (click)="d1.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+                                <input class="form-control" placeholder="dd/mm/yyyy" name="d1" #c1="ngModel" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <from class="form-group">
+                            <label class="font-normal">Ca làm việc</label>
+                            <ng-select2 class="chosen-select" width="306px" [data]="shift" tabindex="2" placeholder="Chọn tình trạng..">
+                            </ng-select2>
+                        </from>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="font-normal">Lý do xin nghỉ</label>
+                            <div class="input-group">
+                                <textarea class="form-control" placeholder="Nhập mô tả"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Nhân viên</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="Nhập tôn giáo" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Tình trạng phê duyệt</label>
+                            <ng-select2 class="chosen-select" width="306px" [data]="status" tabindex="2" placeholder="Chọn tình trạng..">
+                            </ng-select2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-normal">Số điện thoại</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="Nhập tôn giáo" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="font-normal">Nội dung trao đổi</label>
+                            <div class="input-group">
+                                <textarea class="form-control" placeholder="Nhập mô tả"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox col-lg-12">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white min-w-100" data-dismiss="modal" (click)="d('Cross click')">Hủy</button>
+                    <button type="button" class="btn btn-primary min-w-100">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
